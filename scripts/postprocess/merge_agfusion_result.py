@@ -11,6 +11,7 @@ import glob
 import os
 import csv
 from pyensembl import ensembl_grch37, EnsemblRelease
+import math
 
 
 def parse_arguments():
@@ -43,7 +44,7 @@ def read_fasta(path):
     return prot_ids, tx_ids, seq
 
 
-def get_relative_cds_pos(data, tx_id, pos):
+def get_cds_pos(data, tx_id, pos):
     """Calculate the relative position along the CDS"""
     # get transcript obj
     tx = data.transcript_by_id(tx_id)
@@ -55,17 +56,25 @@ def get_relative_cds_pos(data, tx_id, pos):
     except ValueError:
         pass
     if offset_pos is None:
-        return None
+        return None, None
 
     if tx.protein_sequence and tx.complete:
-        # figure out the relative loc
+        # figure out pos of cds
         start_pos = tx.first_start_codon_spliced_offset
         last_pos = tx.last_stop_codon_spliced_offset
         mylen = last_pos - start_pos
 
-        return (offset_pos - start_pos) / float(mylen)
+        # figure out the pos relative to the CDS
+        cds_offset = offset_pos - start_pos
+        rel_pos = cds_offset / float(mylen)
+        #if cds_offset<0 or cds_offset>mylen:
+            #codon_pos = 0
+        #else:
+        codon_pos = math.ceil((cds_offset+1)/3)
+
+        return codon_pos, rel_pos
     else:
-        return None
+        return None, None
 
 
 def main(opts):
@@ -97,20 +106,19 @@ def main(opts):
             if column_list is None:
                 column_list = tmp_columns
             tmp_list = next(myreader)
-        #tmp_df = pd.read_csv(fus_info_path)
-        #tmp_df['ID'] = p_id
-        #tmp_df['TX_ID'] = tx_id
-        #tmp_df['protein_sequence'] = seq
 
         # figure out the pos of the break
-        relative_pos1 = get_relative_cds_pos(data, tmp_list[2], int(break1))
-        relative_pos2 = get_relative_cds_pos(data, tmp_list[3], int(break2))
+        codon_pos1, relative_pos1 = get_cds_pos(data, tmp_list[2], int(break1))
+        codon_pos2, relative_pos2 = get_cds_pos(data, tmp_list[3], int(break2))
 
         # append results
-        output_list.append(tmp_list + [p_id+':'+break1+"-"+break2, tx_id, seq, break1, break2, relative_pos1, relative_pos2])
+        output_list.append(tmp_list + [p_id+':'+break1+"-"+break2, tx_id, seq,
+                                       break1, break2, codon_pos1, codon_pos2,
+                                       relative_pos1, relative_pos2])
 
     # merge results
-    output_df = pd.DataFrame(output_list, columns=column_list+['ID', 'TX_ID', 'protein_sequence', 'Break1', 'Break2', 'RelativePos1', 'RelativePos2'])
+    mycols = column_list+['ID', 'TX_ID', 'protein_sequence', 'Break1', 'Break2', 'CodonPos1', 'CodonPos2', 'RelativePos1', 'RelativePos2']
+    output_df = pd.DataFrame(output_list, columns=mycols)
 
     # add gene ID
     output_df['GENE_ID'] = output_df["5'_gene"] + '--' + output_df["3'_gene"]
