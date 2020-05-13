@@ -7,7 +7,7 @@ Description: Find COP1 degron motifs
 """
 import argparse
 import re
-from Bio import SeqIO
+#from Bio import SeqIO
 import csv
 import pandas as pd
 
@@ -16,10 +16,13 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description=info)
     parser.add_argument('-i', '--input',
                         type=str, required=True,
-                        help='FASTA file')
+                        help='Input file for analysis')
     parser.add_argument('-m', '--motif',
                         type=str, required=True,
                         help='File containing regex motifs for degrons')
+    parser.add_argument('-u', '--uniprot-xref',
+                        type=str, required=True,
+                        help='Uniprot cross reference')
     parser.add_argument('-p', '--phospho',
                         type=str, required=True,
                         help='Phosphosites from phosphositeplusdb')
@@ -31,23 +34,32 @@ def parse_arguments():
 
 
 def main(opts):
+    # read in sequence file
+    df = pd.read_csv(opts['input'], sep='\t')
+    df = df.dropna(subset=['protein_sequence'])
+    df = df.rename(columns={'protein_id': 'ID'})
+    # read uniprot to ensembl data
+    uniprot_xref = pd.read_csv(opts['uniprot_xref'], sep='\t',
+                               header=None, names=['UniprotID', 'Type', 'XrefID'])
+    uniprot_xref = uniprot_xref[uniprot_xref['Type']=='Ensembl_PRO']
+    ensToUni = dict(uniprot_xref[['XrefID', 'UniprotID']].values)
     # read motifs
     motif = pd.read_csv(opts['motif'], sep='\t')
-    motif = motif[motif['ELMIdentifier'].str.startswith('DEG')]
-    #motif = motif[motif['ELMIdentifier']=='DEG_SCF_TRCP1_1']
     # read phosphorylation sites
     phospho = pd.read_csv(opts['phospho'], sep='\t')
     phospho = phospho[phospho['ORGANISM']=='human']
     phospho['POS'] = phospho['MOD_RSD'].str.extract('([0-9]+)-p', expand=True)[0].astype(int)
 
     # regex search
-    output_list = [['MOTIF', 'NAME', 'ACC', 'START', 'END']]
-    for record in SeqIO.parse(opts['input'], 'fasta'):
-        uniprot_id = record.name.split('|')[1]
-        name = record.name.split('|')[2]
-        myseq = str(record.seq)
+    output_list = [['motif', 'gene', 'transcript_id', 'ID', 'uniprot_id', 'start', 'end']]
+    for seq_ix, seq_row in df.iterrows():
+        gene, tx_id = seq_row['gene'], seq_row['transcript_id']
+        prot_id = seq_row['ID']
+        uniprot_id = ensToUni.get(prot_id, '')
+        myseq = seq_row['protein_sequence']
+
         for ix, row in motif.iterrows():
-            motif_id, regex = row['ELMIdentifier'], row['Regex']
+            motif_id, regex = row['Name'], row['Degron']
             num_phospho = len(re.findall('\(', regex))
             for hit in re.finditer(regex, myseq):
                 phospho_ct = 0
@@ -63,7 +75,7 @@ def main(opts):
                     if tmp_flag:
                         continue
                 start, end = hit.start(), hit.end()
-                output_list.append([motif_id, name, uniprot_id, start, end, ])
+                output_list.append([motif_id, gene, tx_id, prot_id, uniprot_id, start, end, ])
 
     # save output
     with open(opts['output'], 'w') as handle:
