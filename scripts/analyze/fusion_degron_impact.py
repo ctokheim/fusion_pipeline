@@ -35,7 +35,6 @@ def filter_fusions(fus_df):
     is_empty_seq = fusions['protein_sequence'].isnull()
 
 
-
 def main(opts):
     # read data
     fusions = pd.read_csv(opts['input'], sep='\t')
@@ -88,7 +87,7 @@ def main(opts):
             tmp_scores_all = ','.join(g2_degrons['Random Forest score'].astype(str).values)
 
             # figure out if any degrons are lost
-            g2_lost = g2_degrons.loc[g2_degrons['start']>=c1, :]
+            g2_lost = g2_degrons.loc[g2_degrons['end']<=c2, :]
             if len(g2_lost):
                 tmp_did = ','.join(g2_lost['DegronID'].values)
                 tmp_motif = ','.join(g2_lost['motif'].values)
