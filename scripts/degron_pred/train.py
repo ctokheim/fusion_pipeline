@@ -51,7 +51,6 @@ def main(opts):
     feat_df = feat_df.fillna(feat_df.mean())
     y = [0 if ix.startswith('SIM_') else 1 for ix in feat_df.index.values]
 
-
     # train rf in cross-val to eval performance
     rf = RandomForestClassifier(n_estimators=1000, oob_score=True)
     myscores = cross_val_predict(rf, feat_df, y, cv=20, method='predict_proba')[:,1]
