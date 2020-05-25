@@ -26,6 +26,9 @@ def parse_arguments():
     parser.add_argument('-p', '--phospho',
                         type=str, required=True,
                         help='Phosphosites from phosphositeplusdb')
+    parser.add_argument('-a', '--acetyl',
+                        type=str, required=True,
+                        help='Acetylation from phosphositeplusdb')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='Output results')
@@ -49,6 +52,10 @@ def main(opts):
     phospho = pd.read_csv(opts['phospho'], sep='\t')
     phospho = phospho[phospho['ORGANISM']=='human']
     phospho['POS'] = phospho['MOD_RSD'].str.extract('([0-9]+)-p', expand=True)[0].astype(int)
+    # read acetylation sites
+    acetyl = pd.read_csv(opts['acetyl'], sep='\t', skiprows=3)
+    acetyl = acetyl[acetyl['ORGANISM']=='human']
+    acetyl['POS'] = acetyl['MOD_RSD'].str.extract('([0-9]+)-ac', expand=True)[0].astype(int)
 
     # regex search
     output_list = [['motif', 'gene', 'transcript_id', 'ID', 'uniprot_id', 'start', 'end']]
@@ -60,18 +67,21 @@ def main(opts):
 
         for ix, row in motif.iterrows():
             motif_id, regex = row['Name'], row['Degron']
-            num_phospho = len(re.findall('\(', regex))
+            num_ptm = len(re.findall('\(', regex))
             for hit in re.finditer(regex, myseq):
-                phospho_ct = 0
+                ptm_ct = 0
                 # make sure phosphorylation matches, if necessary
-                if num_phospho:
-                    tmp_phospho = phospho[phospho['ACC_ID']==uniprot_id]
+                if num_ptm:
+                    # extract appropriate ptm mark
+                    if row['E3'] != 'CRBN':
+                        tmp_ptm = phospho[phospho['ACC_ID']==uniprot_id]
+                    else:
+                        tmp_ptm = acetyl[acetyl['ACC_ID']==uniprot_id]
+
                     tmp_flag = False
-                    #if uniprot_id == 'P35222': import IPython ; IPython.embed() ; raise
-                    for i in range(1, num_phospho+1):
+                    for i in range(1, num_ptm+1):
                         tmp_pos = hit.span(i)[1]  # pick end so adjust for zero-to-one coords
-                        if tmp_pos not in tmp_phospho['POS'].values: tmp_flag = True
-                        #if tmp_pos in tmp_phospho['POS'].values: phospho_ct += 1
+                        if tmp_pos not in tmp_ptm['POS'].values: tmp_flag = True
                     if tmp_flag:
                         continue
                 start, end = hit.start(), hit.end()
