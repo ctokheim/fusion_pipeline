@@ -21,6 +21,9 @@ def parse_arguments():
     parser.add_argument('-t', '--transcript',
                         type=str, required=True,
                         help='Canonical transcript file')
+    parser.add_argument('-c', '--custom',
+                        type=str, required=True,
+                        help='Custom selected transcripts')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='Agfusion file with transcript IDs')
@@ -83,6 +86,23 @@ def main(opts):
     df['Transcript1'] = tmp1
     df['Transcript2'] = tmp2
 
+    # merge in custom transcript
+    custom_tx = pd.read_csv(opts['custom'], sep='\t')
+    if len(custom_tx):
+        # merge custom tx
+        rename_dict = {'gene': 'Gene1', 'transcript_id': 'custom_transcript1'}
+        df = pd.merge(df, custom_tx.rename(columns=rename_dict)[['Gene1', 'custom_transcript1']],
+                      on='Gene1', how='left')
+        rename_dict = {'gene': 'Gene2', 'transcript_id': 'custom_transcript2'}
+        df = pd.merge(df, custom_tx.rename(columns=rename_dict)[['Gene2', 'custom_transcript2']],
+                      on='Gene2', how='left')
+
+        # replace mane tx with custom tx
+        is_not_null = ~df['custom_transcript1'].isnull()
+        df.loc[is_not_null, 'Transcript1'] = df.loc[is_not_null, 'custom_transcript1']
+        is_not_null = ~df['custom_transcript2'].isnull()
+        df.loc[is_not_null, 'Transcript2'] = df.loc[is_not_null, 'custom_transcript2']
+
     # Check transcripts
     data = EnsemblRelease(95)
 
@@ -104,14 +124,6 @@ def main(opts):
     with open(opts['output'], 'w') as whandle:
         mywriter = csv.writer(whandle, delimiter='\t', lineterminator='\n')
         mywriter.writerows(output_list)
-
-    # replace gene symbols
-    #is_tx1_null = df['Transcript1'].isnull()
-    #df.loc[~is_tx1_null, 'Gene1'] = df.loc[~is_tx1_null, 'Transcript1']
-    #is_tx2_null = df['Transcript2'].isnull()
-    #df.loc[~is_tx2_null, 'Gene2'] = df.loc[~is_tx2_null, 'Transcript2']
-    # save file
-    #df[['Gene1', 'Break1', 'Gene2', 'Break2']].to_csv(opts['output'], sep='\t', index=False, header=None)
 
 
 if __name__ == '__main__':
