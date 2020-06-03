@@ -3,7 +3,7 @@ File: regex_degron_search.py
 Author: Collin Tokheim
 Email: ctokheim@mail.dfci.harvard.edu
 Github: ctokheim
-Description: Find COP1 degron motifs
+Description: Find degron motifs
 """
 import argparse
 import re
