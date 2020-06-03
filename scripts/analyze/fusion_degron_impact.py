@@ -42,8 +42,11 @@ def main(opts):
     useful_cols = ['Random Forest score', 'geneSymbol', 'DegronID']
     degron = pd.read_csv(opts['degron_pred'], sep='\t', usecols=useful_cols)
 
-    # merge degron info
+    # process motif info to remove duplicates from similar motifs
     motif['DegronID'] = motif['gene']+'_'+motif['standardized_uniprot_id']+'_'+motif['start'].astype(str)+'-'+motif['end'].astype(str)
+    motif = motif.drop_duplicates(subset=['DegronID'])
+
+    # merge degron info
     degron = pd.merge(degron, motif[['DegronID', 'motif', 'start', 'end']], on='DegronID', how='left')
     # filter to only high scoring motifs
     degron = degron[degron['Random Forest score']>0.6]
@@ -54,7 +57,9 @@ def main(opts):
 
     # iterate over each fusion
     output_list = [['ID', 'type', 'gene', 'degron_id (loss)', 'motif (loss)',
-                    'score (loss)', 'degron_id (all)', 'motif (all)', 'score (all)']]
+                    'score (loss)', 'score sum (loss)', 'degron_id (retained)',
+                    'motif (retained)', 'score (retained)', 'score sum (retained)',
+                    'degron_id (all)', 'motif (all)', 'score (all)', 'score sum (all)']]
     for ix, row in fusions.iterrows():
         g1, g2 = row["5'_gene"], row["3'_gene"]
         c1, c2 = row['CodonPos1'], row['CodonPos2']
@@ -68,59 +73,93 @@ def main(opts):
             tmp_did_all = ','.join(g1_degrons['DegronID'].values)
             tmp_motif_all = ','.join(g1_degrons['motif'].values)
             tmp_scores_all = ','.join(g1_degrons['Random Forest score'].astype(str).values)
+            tmp_scores_all_sum = g1_degrons['Random Forest score'].sum()
 
             # figure out if any degrons are lost
             g1_lost = g1_degrons.loc[g1_degrons['start']>=c1, :]
             if len(g1_lost):
-                tmp_did = ','.join(g1_lost['DegronID'].values)
-                tmp_motif = ','.join(g1_lost['motif'].values)
-                tmp_scores = ','.join(g1_lost['Random Forest score'].astype(str).values)
-                output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                tmp_did_lost = ','.join(g1_lost['DegronID'].values)
+                tmp_motif_lost = ','.join(g1_lost['motif'].values)
+                tmp_scores_lost = ','.join(g1_lost['Random Forest score'].astype(str).values)
+                tmp_scores_lost_sum = g1_lost['Random Forest score'].sum()
+                #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
             else:
-                output_list.append([row['ID'], "5_prime", g1, None, None, None, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                tmp_did_lost = None
+                tmp_motif_lost = None
+                tmp_scores_lost = None
+                tmp_scores_lost_sum = None
+                #output_list.append([row['ID'], "5_prime", g1, None, None, None, tmp_did_all, tmp_motif_all, tmp_scores_all])
+            # figure out if any degrons are retained
+            g1_retained = g1_degrons.loc[g1_degrons['start']<c1, :]
+            if len(g1_retained):
+                tmp_did_retained = ','.join(g1_retained['DegronID'].values)
+                tmp_motif_retained = ','.join(g1_retained['motif'].values)
+                tmp_scores_retained = ','.join(g1_retained['Random Forest score'].astype(str).values)
+                tmp_scores_retained_sum = g1_retained['Random Forest score'].sum()
+                #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+            else:
+                tmp_did_retained = None
+                tmp_motif_retained = None
+                tmp_scores_retained = None
+                tmp_scores_retained_sum = None
+                #output_list.append([row['ID'], "5_prime", g1, None, None, None, tmp_did_all, tmp_motif_all, tmp_scores_all])
+            output_list.append(
+                [row['ID'], "5_prime", g1,
+                 tmp_did_lost, tmp_motif_lost, tmp_scores_lost, tmp_scores_lost_sum,
+                 tmp_did_retained, tmp_motif_retained, tmp_scores_retained, tmp_scores_retained_sum,
+                 tmp_did_all, tmp_motif_all, tmp_scores_all, tmp_scores_all_sum,
+            ])
         else:
-            output_list.append([row['ID'], "5_prime", g1, None, None, None, None, None, None])
+            output_list.append([row['ID'], "5_prime", g1,
+                                None, None, None, None,
+                                None, None, None, None,
+                                None, None, None, None])
 
         if len(g2_degrons):
             tmp_did_all = ','.join(g2_degrons['DegronID'].values)
             tmp_motif_all = ','.join(g2_degrons['motif'].values)
             tmp_scores_all = ','.join(g2_degrons['Random Forest score'].astype(str).values)
+            tmp_scores_all_sum = g2_degrons['Random Forest score'].sum()
 
             # figure out if any degrons are lost
             g2_lost = g2_degrons.loc[g2_degrons['end']<=c2, :]
             if len(g2_lost):
-                tmp_did = ','.join(g2_lost['DegronID'].values)
-                tmp_motif = ','.join(g2_lost['motif'].values)
-                tmp_scores = ','.join(g2_lost['Random Forest score'].astype(str).values)
-                output_list.append([row['ID'], "3_prime", g2, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                tmp_did_lost = ','.join(g2_lost['DegronID'].values)
+                tmp_motif_lost = ','.join(g2_lost['motif'].values)
+                tmp_scores_lost = ','.join(g2_lost['Random Forest score'].astype(str).values)
+                tmp_scores_sum_lost = g1_lost['Random Forest score'].sum()
+                #output_list.append([row['ID'], "3_prime", g2, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
             else:
-                output_list.append([row['ID'], "3_prime", g2, None, None, None, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                tmp_did_lost = None
+                tmp_motif_lost = None
+                tmp_scores_lost = None
+                tmp_scores_lost_sum = None
+                #output_list.append([row['ID'], "3_prime", g2, None, None, None, tmp_did_all, tmp_motif_all, tmp_scores_all])
+            # figure out if any degrons are retained
+            g2_retained = g2_degrons.loc[g2_degrons['start']>c2, :]
+            if len(g2_retained):
+                tmp_did_retained = ','.join(g2_retained['DegronID'].values)
+                tmp_motif_retained = ','.join(g2_retained['motif'].values)
+                tmp_scores_retained = ','.join(g2_retained['Random Forest score'].astype(str).values)
+                tmp_scores_retained_sum = g2_retained['Random Forest score'].sum()
+                #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+            else:
+                tmp_did_retained = None
+                tmp_motif_retained = None
+                tmp_scores_retained = None
+                tmp_scores_retained_sum = None
+                #output_list.append([row['ID'], "5_prime", g1, None, None, None, tmp_did_all, tmp_motif_all, tmp_scores_all])
+            output_list.append(
+                [row['ID'], "3_prime", g2,
+                 tmp_did_lost, tmp_motif_lost, tmp_scores_lost, tmp_scores_lost_sum,
+                 tmp_did_retained, tmp_motif_retained, tmp_scores_retained, tmp_scores_retained_sum,
+                 tmp_did_all, tmp_motif_all, tmp_scores_all, tmp_scores_all_sum,
+            ])
         else:
-            output_list.append([row['ID'], "3_prime", g2, None, None, None, None, None, None])
-
-
-        #else:
-            #g1_lost = []
-        #if len(g2_degrons):
-            #g2_lost = g2_degrons.loc[g2_degrons['end']<=c2, :]
-        #else:
-            #g2_lost = []
-
-        # append results
-        #if len(g1_lost):
-            #tmp_did = ','.join(g1_lost['DegronID'].values)
-            #tmp_motif = ','.join(g1_lost['motif'].values)
-            #tmp_scores = ','.join(g1_lost['Random Forest score'].astype(str).values)
-            #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores])
-        #else:
-            #output_list.append([row['ID'], "5_prime", g1, None, None, None])
-        #if len(g2_lost):
-            #tmp_did = ','.join(g2_lost['DegronID'].values)
-            #tmp_motif = ','.join(g2_lost['motif'].values)
-            #tmp_scores = ','.join(g2_lost['Random Forest score'].astype(str).values)
-            #output_list.append([row['ID'], "3_prime", g2, tmp_did, tmp_motif, tmp_scores])
-        #else:
-            #output_list.append([row['ID'], "3_prime", g2, None, None, None])
+            output_list.append([row['ID'], "3_prime", g2,
+                                None, None, None, None,
+                                None, None, None, None,
+                                None, None, None, None])
 
     # save output
     with open(opts['output'], 'w') as whandle:
