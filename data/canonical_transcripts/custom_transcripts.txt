@@ -1,0 +1,2 @@
+gene	transcript_id
+TMPRSS2	ENST00000332149
