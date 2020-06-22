@@ -4,6 +4,9 @@ mkdir -p $out_dir/agfusion
 mkdir -p $out_dir/fusion_annotation
 mkdir -p $out_dir/degron_pred
 mkdir -p $out_dir/motif
+mkdir -p $out_dir/statistical_test
+mkdir -p $out_dir/statistical_test/ctype
+mkdir -p $out_dir/statistical_test/degron
 
 # annotation files
 PHOS_PATH=/liulab/ctokheim/projects/data/protein_modifications/phosphosite/3_6_2019/Phosphorylation_site_dataset 
@@ -49,16 +52,42 @@ SNVBOX_DIR=data/snvbox
 ######################
 # Add annotations to fusion genes
 ######################
-python scripts/postprocess/add_fusion_annotations.py \
-    -i $out_dir/fusion_annotation/annotated_fusions.txt \
-    -d $out_dir/degron_pred/fusion_internal_degron_impact.txt \
-    -c $out_dir/degron_pred/cterm_degron_results.txt \
-    -fc data/fusion/tcga_fusion_calls.txt \
-    -wd $out_dir/fusion_annotation/wt_prot_domains.txt \
-    -fd $out_dir/fusion_annotation/fusion_prot_domains.txt \
-    -cgc data/drivers/Census_allThu\ Apr\ \ 9\ 21_19_01\ 2020.tsv \
-    -ot data/drivers/OG_TSG_annotation.txt   \
-    -ok data/drivers/oncokb_4_3_2017.txt \
-    -drug data/drugability/interactions.tsv \
-    -driver data/drivers/driver_flags/PANCAN.txt \
-    -o $out_dir/fusion_annotation/full_annotated_fusions.txt
+#python scripts/postprocess/add_fusion_annotations.py \
+    #-i $out_dir/fusion_annotation/annotated_fusions.txt \
+    #-d $out_dir/degron_pred/fusion_internal_degron_impact.txt \
+    #-c $out_dir/degron_pred/cterm_degron_results.txt \
+    #-fc data/fusion/tcga_fusion_calls.txt \
+    #-wd $out_dir/fusion_annotation/wt_prot_domains.txt \
+    #-fd $out_dir/fusion_annotation/fusion_prot_domains.txt \
+    #-cgc data/drivers/Census_allThu\ Apr\ \ 9\ 21_19_01\ 2020.tsv \
+    #-ot data/drivers/OG_TSG_annotation.txt   \
+    #-ok data/drivers/oncokb_4_3_2017.txt \
+    #-drug data/drugability/interactions.tsv \
+    #-driver data/drivers/driver_flags/PANCAN.txt \
+    #-o $out_dir/fusion_annotation/full_annotated_fusions.txt
+#######################
+# cancer type specific test
+#######################
+#python scripts/analyze/ctype_specificity_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -n 10000 --three-prime -o $out_dir/statistical_test/ctype/three_prime
+#python scripts/analyze/ctype_specificity_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -n 10000 --three-prime --domain -o $out_dir/statistical_test/ctype/three_prime_domain
+#python scripts/analyze/ctype_specificity_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -n 10000 -o $out_dir/statistical_test/ctype/five_prime
+#python scripts/analyze/ctype_specificity_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -n 10000 --domain -o $out_dir/statistical_test/ctype/five_prime_domain
+#######################
+# Internal Degron retention
+#######################
+#python scripts/analyze/degron_retention_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --three-prime -o $out_dir/statistical_test/degron/three_prime_retention.txt
+#python scripts/analyze/degron_retention_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --three-prime --domain -o $out_dir/statistical_test/degron/three_prime_retention_domain.txt
+#python scripts/analyze/degron_retention_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -o $out_dir/statistical_test/degron/five_prime_retention.txt
+#python scripts/analyze/degron_retention_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --domain -o $out_dir/statistical_test/degron/five_prime_retention_domain.txt
+#######################
+# Internal Degron loss
+#######################
+#python scripts/analyze/degron_loss_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --three-prime -o $out_dir/statistical_test/degron/three_prime_loss.txt
+#python scripts/analyze/degron_loss_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --three-prime --domain -o $out_dir/statistical_test/degron/three_prime_loss_domain.txt
+#python scripts/analyze/degron_loss_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -o $out_dir/statistical_test/degron/five_prime_loss.txt
+#python scripts/analyze/degron_loss_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --domain -o $out_dir/statistical_test/degron/five_prime_loss_domain.txt
+#######################
+# C-terminal degron loss
+#######################
+python scripts/analyze/cterm_degron_loss_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt -o $out_dir/statistical_test/degron/five_prime_cterm_loss.txt
+python scripts/analyze/cterm_degron_loss_test.py -i $out_dir/fusion_annotation/full_annotated_fusions.txt --domain -o $out_dir/statistical_test/degron/five_prime_cterm_loss_domain.txt
