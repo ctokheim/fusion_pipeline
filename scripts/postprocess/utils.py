@@ -45,7 +45,6 @@ def read_drivers(mypath):
     tmp = pd.read_csv(mypath, sep='\t').rename(columns={'Hugo Symbol': 'gene'})
     return tmp
 
-
 def myrename(mystr, suffix="5'"):
     if mystr=='gene':
         return "5'_gene" if suffix=="5'" else "3'_gene"
@@ -216,7 +215,6 @@ def compute_p_value(scores, null_p_values):
     pvals = scores.apply(lambda x: score2pval(x, null_p_val_scores, null_p_values))
     return pvals
 
-
 def score2pval(score, null_scores, null_pvals):
     """Looks up the P value from the empirical null distribution based on the provided
     score.
@@ -256,7 +254,6 @@ def cummin(x):
             x[i] = x[i-1]
     return x
 
-
 def bh_fdr(pval):
     """A python implementation of the Benjamani-Hochberg FDR method.
     This code should always give precisely the same answer as using
@@ -281,7 +278,6 @@ def bh_fdr(pval):
     i = np.arange(1, int(n)+1, dtype=float)[::-1]  # largest to smallest
     pval_adj = np.minimum(1, cummin(n/i * pval_array[::-1]))[::-1]
     return pval_adj[original_order]
-
 
 def process_cgc(path, return_dataframe=False, fusions=False):
     """Get the list of CGC genes with small somatic variants."""

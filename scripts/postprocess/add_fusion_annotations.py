@@ -63,8 +63,8 @@ def main(opts):
     # add driver gene information
     drivers = utils.read_drivers(opts['og_tsg'])
     mycols_drivers = ['gene', 'Is Oncogene (OncoKB)', 'Is Tumor Suppressor Gene (OncoKB)',
-                    'Is Oncogene (TCGA)', 'Is Tumor Suppressor Gene (TCGA)', 'Is Driver Gene (TCGA)',
-                    'Is Oncogene (CGC)', 'Is Tumor Suppressor Gene (CGC)', 'Is Driver Gene (CGC)']
+                      'Is Oncogene (TCGA)', 'Is Tumor Suppressor Gene (TCGA)', 'Is Driver Gene (TCGA)',
+                      'Is Oncogene (CGC)', 'Is Tumor Suppressor Gene (CGC)', 'Is Driver Gene (CGC)']
     rename_func = lambda x: "5'_" + x
     fusion_calls = pd.merge(fusion_calls, drivers[mycols_drivers].rename(columns=rename_func), on=["5'_gene"], how='left')
     rename_func = lambda x: "3'_" + x
