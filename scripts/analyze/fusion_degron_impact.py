@@ -127,7 +127,7 @@ def main(opts):
                 tmp_did_lost = ','.join(g2_lost['DegronID'].values)
                 tmp_motif_lost = ','.join(g2_lost['motif'].values)
                 tmp_scores_lost = ','.join(g2_lost['Random Forest score'].astype(str).values)
-                tmp_scores_sum_lost = g1_lost['Random Forest score'].sum()
+                tmp_scores_lost_sum = g2_lost['Random Forest score'].sum()
                 #output_list.append([row['ID'], "3_prime", g2, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
             else:
                 tmp_did_lost = None
