@@ -73,6 +73,7 @@ def bh_fdr(pval):
     pval_adj = np.minimum(1, cummin(n/i * pval_array[::-1]))[::-1]
     return pval_adj[original_order]
 
+
 def main(opts):
     fusion_calls = pd.read_csv(opts['input'], sep='\t')
 
@@ -178,9 +179,6 @@ def main(opts):
     result_loss.to_csv(mypath, sep='\t')
     mypath = '{}_og.txt'.format(opts['output'])
     result_loss_tmp.to_csv(mypath, sep='\t')
-
-    import IPython ; IPython.embed() ; raise
-
 
 
 if __name__ == '__main__':
