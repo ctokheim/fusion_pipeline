@@ -56,11 +56,22 @@ def main(opts):
     tmp = tmp[tmp["{}_gene".format(eoi)].isin(minimal_genes)].copy()
     tmp.loc[tmp['Fusion_effect'].str.contains('out').fillna(False), 'score sum (retained) {}'.format(other)] = 0
 
+    # normalize by protein length
+    """
+    if eoi=="5''":
+        len_mis = tmp['ProtLen2'] - tmp['CodonPos2']
+        tmp['normalized score sum (retained) {}'.format(other)] = tmp['score sum (retained) {}'.format(other)].div(len_mis).fillna(0)
+    else:
+        len_mis = tmp['CodonPos1']
+        tmp['normalized score sum (retained) {}'.format(other)] = tmp['score sum (retained) {}'.format(other)].div(len_mis).fillna(0)
+    """
+
     # simulate random scores
     prng = np.random.RandomState(101)
     random_result = []
     for i in range(10):
         rand_retention = tmp['score sum (retained) {}'.format(other)].fillna(0).sample(frac=1, replace=False, random_state=prng).values
+        #rand_retention = tmp['normalized score sum (retained) {}'.format(other)].fillna(0).sample(frac=1, replace=False, random_state=prng).values
         random_df = pd.DataFrame({'gene': tmp["{}_gene".format(eoi)], "score": rand_retention})
         tmp_random_result = random_df.groupby('gene')['score'].sum().tolist()
         random_result += tmp_random_result
@@ -68,11 +79,12 @@ def main(opts):
     # calculate p-value
     null_pvals = utils.nullScore2pvalTable(random_result)
     real_scores = tmp.groupby("{}_gene".format(eoi))["score sum (retained) {}".format(other)].sum().fillna(0)
+    #real_scores = tmp.groupby("{}_gene".format(eoi))["normalized score sum (retained) {}".format(other)].sum().fillna(0)
     pvals = utils.compute_p_value(real_scores-0.0001, null_pvals.sort_index(ascending=False))
     myfdr = utils.bh_fdr(pvals)
 
     # save results
-    result = pd.DataFrame({'p-value': pvals, 'q-value': myfdr})
+    result = pd.DataFrame({'p-value': pvals, 'q-value': myfdr, 'score': real_scores})
     result.to_csv(opts['output'], sep='\t')
 
 
