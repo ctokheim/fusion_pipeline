@@ -40,6 +40,9 @@ def parse_arguments():
     parser.add_argument('-ok', '--oncokb',
                         type=str, required=True,
                         help='OncoKB annotations')
+    parser.add_argument('-m', '--maf',
+                        type=str, required=True,
+                        help='MAF file of TCGA point mutations')
     parser.add_argument('-drug', '--druggability',
                         type=str, required=True,
                         help='Druggability annotation')
@@ -99,6 +102,12 @@ def main(opts):
     pancan_flags = pd.read_csv(opts['driver'], sep='\t', index_col=0)
     point_driver_cts = pancan_flags.sum(axis=1).reset_index(name='num_point_drivers').rename(columns={'ID': 'patient_id'})
     fusion_calls = pd.merge(fusion_calls, point_driver_cts, on='patient_id', how='left')
+
+    # add tmb
+    maf = pd.read_csv(opts['maf'], sep='\t')
+    maf['patient_id'] = maf['Tumor_Sample_Barcode'].str[:12]
+    tmb_cts = maf['patient_id'].value_counts().reset_index(name='TMB').rename(columns={'index': 'patient_id'})
+    fusion_calls = pd.merge(fusion_calls, tmb_cts, on='patient_id', how='left')
 
     # Add degron impact info
     is_5prime = degron_impact['type']=='5_prime'
