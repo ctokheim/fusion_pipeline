@@ -35,6 +35,18 @@ def filter_fusions(fus_df):
     is_empty_seq = fusions['protein_sequence'].isnull()
 
 
+def sum_rf_score(mydf):
+    ivls = list(mydf[['start', 'end']].apply(lambda x: pd.Interval(x['start'], x['end'], closed='both'), axis=1).values)
+    mysum = 0
+    prev_intervals = []
+    for ix, ivl in enumerate(ivls):
+        has_overlap = any([ivl.overlaps(p) for p in prev_intervals])
+        if not has_overlap:
+            mysum += mydf['Random Forest score'].iloc[ix]
+        prev_intervals.append(ivl)
+    return mysum
+
+
 def main(opts):
     # read data
     fusions = pd.read_csv(opts['input'], sep='\t')
@@ -65,24 +77,25 @@ def main(opts):
         c1, c2 = row['CodonPos1'], row['CodonPos2']
 
         # get all degrons for those genes
-        g1_degrons = degron.loc[degron['geneSymbol']==g1,:]
-        g2_degrons = degron.loc[degron['geneSymbol']==g2,:]
+        g1_degrons = degron.loc[degron['geneSymbol']==g1,:].sort_values('Random Forest score', ascending=False)
+        g2_degrons = degron.loc[degron['geneSymbol']==g2,:].sort_values('Random Forest score', ascending=False)
 
         # figure out if fusion impacted degrons
         if len(g1_degrons):
             tmp_did_all = ','.join(g1_degrons['DegronID'].values)
             tmp_motif_all = ','.join(g1_degrons['motif'].values)
             tmp_scores_all = ','.join(g1_degrons['Random Forest score'].astype(str).values)
-            tmp_scores_all_sum = g1_degrons['Random Forest score'].sum()
+            #tmp_scores_all_sum = g1_degrons['Random Forest score'].sum()
+            tmp_scores_all_sum = sum_rf_score(g1_degrons)
 
             # figure out if any degrons are lost
-            g1_lost = g1_degrons.loc[g1_degrons['start']>=c1, :]
+            g1_lost = g1_degrons.loc[g1_degrons['end']>=c1, :]
             if len(g1_lost):
                 tmp_did_lost = ','.join(g1_lost['DegronID'].values)
                 tmp_motif_lost = ','.join(g1_lost['motif'].values)
                 tmp_scores_lost = ','.join(g1_lost['Random Forest score'].astype(str).values)
-                tmp_scores_lost_sum = g1_lost['Random Forest score'].sum()
-                #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                #tmp_scores_lost_sum = g1_lost['Random Forest score'].sum()
+                tmp_scores_lost_sum = sum_rf_score(g1_lost)
             else:
                 tmp_did_lost = None
                 tmp_motif_lost = None
@@ -95,8 +108,8 @@ def main(opts):
                 tmp_did_retained = ','.join(g1_retained['DegronID'].values)
                 tmp_motif_retained = ','.join(g1_retained['motif'].values)
                 tmp_scores_retained = ','.join(g1_retained['Random Forest score'].astype(str).values)
-                tmp_scores_retained_sum = g1_retained['Random Forest score'].sum()
-                #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                #tmp_scores_retained_sum = g1_retained['Random Forest score'].sum()
+                tmp_scores_retained_sum = sum_rf_score(g1_retained)
             else:
                 tmp_did_retained = None
                 tmp_motif_retained = None
@@ -119,16 +132,17 @@ def main(opts):
             tmp_did_all = ','.join(g2_degrons['DegronID'].values)
             tmp_motif_all = ','.join(g2_degrons['motif'].values)
             tmp_scores_all = ','.join(g2_degrons['Random Forest score'].astype(str).values)
-            tmp_scores_all_sum = g2_degrons['Random Forest score'].sum()
+            #tmp_scores_all_sum = g2_degrons['Random Forest score'].sum()
+            tmp_scores_all_sum = sum_rf_score(g2_degrons)
 
             # figure out if any degrons are lost
-            g2_lost = g2_degrons.loc[g2_degrons['end']<=c2, :]
+            g2_lost = g2_degrons.loc[g2_degrons['start']<=c2, :]
             if len(g2_lost):
                 tmp_did_lost = ','.join(g2_lost['DegronID'].values)
                 tmp_motif_lost = ','.join(g2_lost['motif'].values)
                 tmp_scores_lost = ','.join(g2_lost['Random Forest score'].astype(str).values)
-                tmp_scores_lost_sum = g2_lost['Random Forest score'].sum()
-                #output_list.append([row['ID'], "3_prime", g2, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                #tmp_scores_lost_sum = g2_lost['Random Forest score'].sum()
+                tmp_scores_lost_sum = sum_rf_score(g2_lost)
             else:
                 tmp_did_lost = None
                 tmp_motif_lost = None
@@ -141,8 +155,8 @@ def main(opts):
                 tmp_did_retained = ','.join(g2_retained['DegronID'].values)
                 tmp_motif_retained = ','.join(g2_retained['motif'].values)
                 tmp_scores_retained = ','.join(g2_retained['Random Forest score'].astype(str).values)
-                tmp_scores_retained_sum = g2_retained['Random Forest score'].sum()
-                #output_list.append([row['ID'], "5_prime", g1, tmp_did, tmp_motif, tmp_scores, tmp_did_all, tmp_motif_all, tmp_scores_all])
+                #tmp_scores_retained_sum = g2_retained['Random Forest score'].sum()
+                tmp_scores_retained_sum = sum_rf_score(g2_retained)
             else:
                 tmp_did_retained = None
                 tmp_motif_retained = None
