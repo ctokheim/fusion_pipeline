@@ -90,7 +90,6 @@ def concat_results(r1, r2):
     return result_retained
 
 
-
 def main(opts):
     fusion_calls = pd.read_csv(opts['input'], sep='\t')
 
@@ -118,16 +117,6 @@ def main(opts):
     # make sure non-inframe fusions don't contribute to scores
     #tmp.loc[tmp['Fusion_effect'].str.contains('out').fillna(False), 'score sum (retained) {}'.format(other)] = 0
     tmp.loc[~is_inframe, 'score sum (retained) {}'.format(other)] = 0
-
-    # normalize by protein length
-    """
-    if eoi=="5''":
-        len_mis = tmp['ProtLen2'] - tmp['CodonPos2']
-        tmp['normalized score sum (retained) {}'.format(other)] = tmp['score sum (retained) {}'.format(other)].div(len_mis).fillna(0)
-    else:
-        len_mis = tmp['CodonPos1']
-        tmp['normalized score sum (retained) {}'.format(other)] = tmp['score sum (retained) {}'.format(other)].div(len_mis).fillna(0)
-    """
 
     # figure out prot length col
     if eoi == "5'":

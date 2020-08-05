@@ -97,15 +97,6 @@ def main(opts):
     # make sure non-inframe fusions don't contribute to scores
     tmp.loc[~is_inframe, 'score sum (loss) {}'.format(eoi)] = 0
 
-    # normalize scores
-    """
-    if eoi=="5'":
-        len_mis = tmp['ProtLen1'] - tmp['CodonPos1']
-        tmp['normalized score sum (loss) {}'.format(eoi)] = tmp['score sum (loss) {}'.format(eoi)].div(len_mis).fillna(0)
-    else:
-        len_mis = tmp['CodonPos2']
-        tmp['normalized score sum (loss) {}'.format(eoi)] = tmp['score sum (loss) {}'.format(eoi)].div(len_mis).fillna(0)
-    """
     # figure out prot length col
     if eoi == "5'":
         prot_len_col = 'ProtLen1'
