@@ -56,7 +56,7 @@ def get_cds_pos(data, tx_id, pos):
     except ValueError:
         pass
     if offset_pos is None:
-        return None, None
+        return None, None, None
 
     if tx.protein_sequence and tx.complete:
         # figure out pos of cds
@@ -71,10 +71,11 @@ def get_cds_pos(data, tx_id, pos):
             #codon_pos = 0
         #else:
         codon_pos = math.ceil((cds_offset+1)/3)
+        prot_len = math.ceil((mylen+1)/3)
 
-        return codon_pos, rel_pos
+        return codon_pos, rel_pos, prot_len
     else:
-        return None, None
+        return None, None, None
 
 
 def main(opts):
@@ -108,16 +109,17 @@ def main(opts):
             tmp_list = next(myreader)
 
         # figure out the pos of the break
-        codon_pos1, relative_pos1 = get_cds_pos(data, tmp_list[2], int(break1))
-        codon_pos2, relative_pos2 = get_cds_pos(data, tmp_list[3], int(break2))
+        codon_pos1, relative_pos1, prot_len1 = get_cds_pos(data, tmp_list[2], int(break1))
+        codon_pos2, relative_pos2, prot_len2 = get_cds_pos(data, tmp_list[3], int(break2))
 
         # append results
         output_list.append(tmp_list + [p_id+':'+break1+"-"+break2, tx_id, seq,
                                        break1, break2, codon_pos1, codon_pos2,
-                                       relative_pos1, relative_pos2])
+                                       relative_pos1, relative_pos2, prot_len1, prot_len2])
 
     # merge results
-    mycols = column_list+['ID', 'TX_ID', 'protein_sequence', 'Break1', 'Break2', 'CodonPos1', 'CodonPos2', 'RelativePos1', 'RelativePos2']
+    mycols = column_list+['ID', 'TX_ID', 'protein_sequence', 'Break1', 'Break2', 'CodonPos1',
+                          'CodonPos2', 'RelativePos1', 'RelativePos2', 'ProtLen1', 'ProtLen2']
     output_df = pd.DataFrame(output_list, columns=mycols)
 
     # add gene ID
