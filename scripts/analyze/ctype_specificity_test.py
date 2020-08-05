@@ -88,9 +88,9 @@ def main(opts):
     is_domain_retained = (~fusion_calls["{}_gene domain".format(eoi)].isnull())
     is_low_point_drivers = (fusion_calls['num_point_drivers'].fillna(0)<4)
     if opts["domain"]:
-        myflag = is_inframe & is_low_point_drivers & is_domain_retained
+        myflag = is_inframe & is_domain_retained # & is_low_point_drivers
     else:
-        myflag = is_inframe & is_low_point_drivers
+        myflag = is_inframe # & is_low_point_drivers
     tmp = fusion_calls[myflag].copy()
     # only keep genes with at least 2 fusions
     gene_cts = tmp["{}_gene".format(eoi)].value_counts()
@@ -129,31 +129,6 @@ def main(opts):
     null_pvals = null_cts / num_sim
     myfdr = bh_fdr(null_pvals)
 
-    """
-    # calculate entropy
-    null_cts = pd.Series([0 for i in range(len(entropy))], index=entropy.index)
-    for i in range(num_sim):
-        # calc the entropy for each gene's distribution of cancer types
-        #ctype = tmp['cancer_type'].sample(frac=1, replace=False, random_state=prng).values
-        #random_df = pd.DataFrame({'gene': tmp["{}_gene".format(eoi)], "cancer_type": ctype})
-        tmp_entropy = calc_entropy(random_df.iloc[:, [-1, i]], gene_col="gene", cancer_col=str(i))
-
-        # add to counter if entropy is lower
-        try:
-            is_low_entropy = tmp_entropy.loc[entropy.index]<=entropy
-        except:
-            print('error!')
-            import IPython ; IPython.embed() ; raise
-        null_cts.loc[is_low_entropy] += 1
-
-    # minimum of one count to indicate minimum p-value resolution
-    null_cts.loc[null_cts==0] = 1
-    # get p-values
-    null_pvals = null_cts / num_sim
-    myfdr = bh_fdr(null_pvals)
-    import IPython ; IPython.embed() ; raise
-    """
-
     # figure out which genes are bonafide oncogenes
     #is_og = (fusion_calls["{}_Is Oncogene (OncoKB)".format(eoi)]=="Yes")
     is_og = (fusion_calls["{}_Is Oncogene (OncoKB)".format(eoi)]=='Yes') | (fusion_calls["{}_Is Oncogene (TCGA)".format(eoi)]=='Yes') | (fusion_calls["{}_Is Oncogene (CGC)".format(eoi)]=='Yes')
@@ -171,7 +146,7 @@ def main(opts):
     result_loss = pd.DataFrame({'p-value': null_pvals, 'q-value': myfdr,})
     inframe_frac = frame_df.loc[result_loss.index, 'fraction in-frame']
     result_loss['inframe frac'] = inframe_frac
-    result_loss_tmp = result_loss.loc[og_genes].dropna()
+    result_loss_tmp = result_loss.loc[result_loss.index.intersection(og_genes)].dropna()
     result_loss_tmp['q-value2'] = bh_fdr(result_loss_tmp['p-value'])
 
     # save results
