@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from collections import Counter
 import bisect
+import scipy.stats as stats
 
 def nullScore2pvalTable(scores):
     """Create a p-value table from null-distribution scores"""
@@ -100,3 +101,10 @@ def bh_fdr(pval):
     pval_adj = np.minimum(1, cummin(n/i * pval_array[::-1]))[::-1]
     return pval_adj[original_order]
 
+def fishers_method(pvals):
+    """Fisher's method for combining independent p-values."""
+    pvals = np.asarray(pvals)
+    degrees_of_freedom = 2 * pvals.size
+    chisq_stat = np.sum(-2*np.log(pvals))
+    fishers_pval = stats.chi2.sf(chisq_stat, degrees_of_freedom)
+    return fishers_pval
