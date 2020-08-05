@@ -40,7 +40,6 @@ def read_degron_impact(mypath):
 
     return tmp
 
-
 def read_drivers(mypath):
     tmp = pd.read_csv(mypath, sep='\t').rename(columns={'Hugo Symbol': 'gene'})
     return tmp
