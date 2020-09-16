@@ -85,18 +85,28 @@ def main(opts):
     is_tmp2 = tmp2.isin(cgc_fusions["GENE_ID"].fillna('').values)
     fusion_calls.loc[is_tmp1 | is_tmp2, "Is Fusion Driver (CGC)"] = 'Yes'
     # add oncokb annotation
-    oncokb_fusions = utils.read_oncokb_fusions(opts['oncokb'])
+    oncokb_fusions, oncokb_fusions_one = utils.read_oncokb_fusions(opts['oncokb'])
     fusion_calls['Is Fusion Driver (OncoKB)'] = 'No'
     is_tmp1 = tmp1.isin(oncokb_fusions.fillna('').values)
     is_tmp2 = tmp2.isin(oncokb_fusions.fillna('').values)
     fusion_calls.loc[is_tmp1 | is_tmp2, "Is Fusion Driver (OncoKB)"] = 'Yes'
+    is_tmp1 = fusion_calls["5'_gene"].isin(oncokb_fusions_one)
+    is_tmp2 = fusion_calls["3'_gene"].isin(oncokb_fusions_one)
+    is_inframe = fusion_calls["Fusion_effect"].fillna('').str.contains('in-frame')
+    fusion_calls.loc[(is_tmp1 | is_tmp2) & is_inframe, "Is Fusion Driver (OncoKB)"] = 'Yes'
 
     # add drugability info
     dgenes = utils.read_drugable_genes(opts['druggability'])
-    fusion_calls["5' inhibitor"] = 'No'
-    fusion_calls.loc[fusion_calls["5'_gene"].isin(dgenes), "5' inhibitor"] = 'Yes'
-    fusion_calls["3' inhibitor"] = 'No'
-    fusion_calls.loc[fusion_calls["3'_gene"].isin(dgenes), "3' inhibitor"] = 'Yes'
+    fusion_calls["Is 5' inhibitor?"] = 'No'
+    fusion_calls.loc[fusion_calls["5'_gene"].isin(dgenes['gene_name']), "Is 5' inhibitor?"] = 'Yes'
+    fusion_calls["Is 3' inhibitor?"] = 'No'
+    fusion_calls.loc[fusion_calls["3'_gene"].isin(dgenes['gene_name']), "Is 3' inhibitor?"] = 'Yes'
+    rename_dict = {'gene_name': "5'_gene", "drug_name": "5' inhibitor"}
+    fusion_calls = pd.merge(fusion_calls, dgenes.rename(columns=rename_dict),
+                            on="5'_gene", how='left')
+    rename_dict = {'gene_name': "3'_gene", "drug_name": "3' inhibitor"}
+    fusion_calls = pd.merge(fusion_calls, dgenes.rename(columns=rename_dict),
+                            on="3'_gene", how='left')
 
     # add driver point mutation counts
     pancan_flags = pd.read_csv(opts['driver'], sep='\t', index_col=0)
@@ -138,5 +148,3 @@ def main(opts):
 if __name__ == '__main__':
     opts = parse_arguments()
     main(opts)
-
-

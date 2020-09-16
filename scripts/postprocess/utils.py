@@ -326,12 +326,19 @@ def process_cgc(path, return_dataframe=False, fusions=False):
         return cgc_genes
 
 def read_oncokb_fusions(mypath):
+    """Read in oncogenic fusions annotated from OncoKB."""
     tmp = pd.read_csv(mypath, sep='\t')
     is_fus = tmp['Alteration'].str.contains('Fusion')
     tmp = tmp[is_fus].copy()
-    oncokb_fusions = tmp["Alteration"].str.extract('(.+) Fusion', expand=False)
-    oncokb_fusions = oncokb_fusions.str.replace('-', '--')
-    return oncokb_fusions
+
+    # fetch cases where both fusion partners specified
+    oncokb_fusions_both = tmp["Alteration"].str.extract('(.+) Fusion', expand=False)
+    oncokb_fusions_both = oncokb_fusions_both.str.replace('-', '--').dropna()
+
+    # get cases where any fusion partner is allowed
+    oncokb_fusions_one = tmp[tmp['Alteration']=='Fusions']['Gene'].unique()
+
+    return oncokb_fusions_both, oncokb_fusions_one
 
 def read_drugable_genes(mypath):
     """Read in druggable genes from DGIdb"""
@@ -342,5 +349,8 @@ def read_drugable_genes(mypath):
     cts = drug.groupby(['drug_name', 'interaction_claim_source'])['gene_name'].nunique().sort_values(ascending=True)
     single_drug_impact = cts[cts==1].copy().index.to_series().reset_index()['drug_name'].unique()
     drug = drug[drug['drug_name'].isin(single_drug_impact)].dropna(subset=['gene_name'])
-    gene_names = drug['gene_name'].unique()
-    return gene_names
+
+    # create a table of gene 2 drug relationships
+    gene2drug = drug.groupby('gene_name')['drug_name'].agg(lambda x: ','.join(list(set(x)))).reset_index()
+    #gene_names = drug['gene_name'].unique()
+    return gene2drug
