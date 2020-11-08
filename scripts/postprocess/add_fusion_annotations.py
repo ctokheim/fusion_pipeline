@@ -49,6 +49,12 @@ def parse_arguments():
     parser.add_argument('-driver', '--driver',
                         type=str, required=True,
                         help='Driver annotation')
+    parser.add_argument('-u', '--ubiquitin',
+                        type=str, required=True,
+                        help='Ubiquitin sites')
+    parser.add_argument('-xref', '--cross-ref',
+                        type=str, required=True,
+                        help='Uniprot cross-ref file')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='Output file')
@@ -134,6 +140,56 @@ def main(opts):
 
     # figure out whether domains were lost from the wt sequence
     fusion_calls = utils.merge_lost_prot_domains(fusion_calls, opts['wildtype_domain'])
+
+    # add ubiquitin site data
+    ubiq = pd.read_csv(opts['ubiquitin'], sep='\t')
+    ubiq = ubiq[ubiq['ORGANISM']=='human']
+    ubiq['POS'] = ubiq['MOD_RSD'].str.extract('([0-9]+)-ub', expand=True)[0].astype(int)
+    # read in ensembl to uniprot cross-ref
+    uniprot_xref = pd.read_csv(opts['cross_ref'], sep='\t',
+                               header=None, names=['UniprotID', 'Type', 'XrefID'])
+    uniprot_xref = uniprot_xref[uniprot_xref['Type']=='Ensembl_PRO']
+    ensToUni = dict(uniprot_xref[['XrefID', 'UniprotID']].values)
+    # get prot IDs from ID column
+    prot_ids = fusion_calls['ID'].str.split(':', expand=True)[0]
+    tmp_ids = prot_ids.str.split('-', expand=True)
+    prot_id1, prot_id2 = tmp_ids[0], tmp_ids[1]
+    num_ub1, num_ub2, total_ub1, total_ub2 = [], [], [], []
+    # iterate through each fusion
+    for ix, row in fusion_calls.iterrows():
+        prot1, prot2 = prot_id1.iloc[ix], prot_id2.iloc[ix]
+        if prot1=='' and prot2=='':
+            num_ub1.append(0)
+            num_ub2.append(0)
+            total_ub1.append(0)
+            total_ub2.append(0)
+            continue
+        uniprot1, uniprot2 = ensToUni.get(prot1, ''), ensToUni.get(prot2, '')
+        if uniprot1:
+            tmp_ub = ubiq[(ubiq['ACC_ID']==uniprot1)]
+            total_ub1.append(len(tmp_ub))
+            num_ub1.append(len(tmp_ub[(tmp_ub['POS']<=row['CodonPos1'])]))
+        else:
+            num_ub1.append(0)
+            total_ub1.append(0)
+        if uniprot2:
+            tmp_ub = ubiq[(ubiq['ACC_ID']==uniprot2)]
+            total_ub2.append(len(tmp_ub))
+            num_ub2.append(len(tmp_ub[(tmp_ub['POS']>=row['CodonPos2'])]))
+        else:
+            num_ub2.append(0)
+            total_ub2.append(0)
+    fusion_calls['NumUbiqSites_Fusion1'] = num_ub1
+    fusion_calls['NumUbiqSites_Fusion2'] = num_ub2
+    fusion_calls['TotalUbiqSites_Prot1'] = total_ub1
+    fusion_calls['TotalUbiqSites_Prot2'] = total_ub2
+
+    # add translocation info
+    fusion_calls['Is translocation?'] = ''
+    is_null = fusion_calls['chrom1'].isnull() | fusion_calls['chrom2'].isnull()
+    is_same_chrom = fusion_calls['chrom1'] == fusion_calls['chrom2']
+    fusion_calls.loc[~is_null & is_same_chrom, 'Is translocation?'] = 'no'
+    fusion_calls.loc[~is_null & ~is_same_chrom, 'Is translocation?'] = 'yes'
 
     # add cterm
     mycols = ['ID', 'fusion degron potential', 'first degron potential',
