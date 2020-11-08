@@ -12,7 +12,7 @@ import csv
 import pandas as pd
 
 def parse_arguments():
-    info = 'Find COP1 degron motifs'
+    info = 'Find degron motifs'
     parser = argparse.ArgumentParser(description=info)
     parser.add_argument('-i', '--input',
                         type=str, required=True,
@@ -96,6 +96,3 @@ def main(opts):
 if __name__ == '__main__':
     opts = parse_arguments()
     main(opts)
-
-
-
