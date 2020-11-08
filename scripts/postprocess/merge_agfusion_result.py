@@ -44,6 +44,14 @@ def read_fasta(path):
     return prot_ids, tx_ids, seq
 
 
+def get_chrom(data, tx_id):
+    """Fetch the chromosome for a transcript"""
+    # get transcript obj
+    tx = data.transcript_by_id(tx_id)
+    #return chrom
+    return tx.contig
+
+
 def get_cds_pos(data, tx_id, pos):
     """Calculate the relative position along the CDS"""
     # get transcript obj
@@ -111,14 +119,17 @@ def main(opts):
         # figure out the pos of the break
         codon_pos1, relative_pos1, prot_len1 = get_cds_pos(data, tmp_list[2], int(break1))
         codon_pos2, relative_pos2, prot_len2 = get_cds_pos(data, tmp_list[3], int(break2))
+        # figure out the chromosome
+        chrom1 = get_chrom(data, tmp_list[2])
+        chrom2 = get_chrom(data, tmp_list[3])
 
         # append results
         output_list.append(tmp_list + [p_id+':'+break1+"-"+break2, tx_id, seq,
-                                       break1, break2, codon_pos1, codon_pos2,
+                                       chrom1, break1, chrom2, break2, codon_pos1, codon_pos2,
                                        relative_pos1, relative_pos2, prot_len1, prot_len2])
 
     # merge results
-    mycols = column_list+['ID', 'TX_ID', 'protein_sequence', 'Break1', 'Break2', 'CodonPos1',
+    mycols = column_list+['ID', 'TX_ID', 'protein_sequence', 'chrom1', 'Break1', 'chrom2', 'Break2', 'CodonPos1',
                           'CodonPos2', 'RelativePos1', 'RelativePos2', 'ProtLen1', 'ProtLen2']
     output_df = pd.DataFrame(output_list, columns=mycols)
 
