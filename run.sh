@@ -1,5 +1,5 @@
 out_dir=$1
-ensembl_ver=75
+ensembl_ver=95
 mkdir -p $out_dir
 mkdir -p $out_dir/agfusion
 mkdir -p $out_dir/fusion_annotation
