@@ -1,0 +1,852 @@
+Hugo Symbol	Entrez Gene ID	# of occurrence within resources (Column D-J)	OncoKB Annotated	Is Oncogene (OncoKB)	Is Tumor Suppressor Gene (OncoKB)	MSK-IMPACT	MSK-HEME	FOUNDATION ONE	FOUNDATION ONE HEME	Vogelstein	SANGER CGC(05/30/2017)	OG score	TSG score	Is Oncogene (TCGA)	Is Tumor Suppressor Gene (TCGA)	Is Driver Gene (TCGA)	Is Oncogene (CGC)	Is Tumor Suppressor Gene (CGC)	Is Driver Gene (CGC)
+LYN	4067.0	4.0	Yes	Yes	No	Yes	Yes	Yes	No	No	No								
+SH2D1A	4068.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+EPCAM	4072.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+EP300	2033.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.0	4.5	No	Yes	Yes	No	No	Yes
+CRBN	51185.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+HIST2H3C	126961.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+EPAS1	2034.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+SMAD2	4087.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.5	No	Yes	Yes	No	No	Yes
+SMAD3	4088.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes						No	No	Yes
+SMAD4	4089.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.0	4.0	No	Yes	Yes	No	No	Yes
+EPHA3	2042.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No	0.0	0.0	No	No	Yes	No	No	Yes
+EPHA5	2044.0	4.0	Yes	No	No	Yes	Yes	No	Yes	No	No								
+EPHA7	2045.0	4.0	Yes	Yes	Yes	Yes	Yes	No	Yes	No	No						No	No	Yes
+MAF	4094.0	4.0	Yes	No	No	No	No	Yes	Yes	No	Yes								
+FBXW7	55294.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	2.0	6.5	No	Yes	Yes	No	No	Yes
+EPHB1	2047.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+EPOR	2057.0	2.0	Yes	Yes	No	No	No	No	Yes	No	No								
+NCOA3	8202.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+ERBB2	2064.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	6.5	0.0	Yes	No	Yes	No	No	Yes
+ERBB3	2065.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	3.5	0.0	Yes	No	Yes	No	No	Yes
+ERBB4	2066.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+ERCC2	2068.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	1.5	0.0	Yes	No	Yes			
+BRIP1	83990.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+ERCC3	2071.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes								
+AMER1	139285.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+LZTR1	8216.0	3.0	Yes	No	Yes	Yes	No	No	No	No	Yes	0.5	0.5	No	No	Yes	No	No	Yes
+ERCC4	2072.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes								
+ABL1	25.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+ERCC5	2073.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes								
+ABL2	27.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+ERF	2077.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+ERG	2078.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+STAG1	10274.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No						No	No	Yes
+ZRSR2	8233.0	5.0	Yes	No	No	Yes	Yes	No	Yes	No	Yes						No	No	Yes
+SETD6	79918.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+RBM10	8241.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes	0.0	3.0	No	Yes	Yes	No	No	Yes
+KDM5C	8242.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.5	No	Yes	Yes	No	No	Yes
+ESR1	2099.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+SMC1A	8243.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No	2.0	0.0	Yes	No	Yes	No	No	Yes
+MAX	4149.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	2.0	0.0	Yes	No	Yes	No	No	Yes
+RPS6KB2	6199.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+ETV1	2115.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes								
+ETV4	2118.0	4.0	Yes	Yes	No	No	No	Yes	Yes	No	Yes								
+ETV5	2119.0	4.0	Yes	Yes	No	No	No	Yes	Yes	No	Yes								
+ACTG1	71.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+ETV6	2120.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+MECOM	2122.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes	0.5	0.0	No	No	Yes			
+MCL1	4170.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+IKZF1	10320.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	No	Yes								
+EWSR1	2130.0	4.0	Yes	Yes	No	No	No	Yes	Yes	No	Yes								
+ACVR1	90.0	4.0	Yes	Yes	No	Yes	Yes	No	No	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+RRAS	6237.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+EZH1	2145.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+ARID1A	8289.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.5	12.5	No	Yes	Yes	No	No	Yes
+MDM2	4193.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+EZH2	2146.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+MDM4	4194.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+HIST3H3	8290.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST2H3A	333932.0	1.0	Yes	No	No	No	No	No	No	No	No								
+RXRA	6256.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No	1.0	0.0	Yes	No	Yes			
+MAP3K1	4214.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	4.0	No	Yes	Yes	No	No	Yes
+AXIN1	8312.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+AXIN2	8313.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	0.5	No	No	Yes	No	No	Yes
+BAP1	8314.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	6.5	No	Yes	Yes	No	No	Yes
+MEN1	4221.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+KLF2	10365.0	1.0	Yes	No	Yes	No	No	No	No	No	No								
+FANCA	2175.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+FANCC	2176.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+FANCD2	2177.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes								
+MET	4233.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	1.0	0.5	Yes	No	Yes	No	No	Yes
+HIST1H2AL	8332.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+HIST1H2AC	8334.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+PARP1	142.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+HIST1H2AM	8336.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No								
+HIST1H2BG	8339.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+FAT1	2195.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	5.5	No	Yes	Yes	No	No	Yes
+ARID1B	57492.0	5.0	Yes	No	Yes	Yes	Yes	No	No	Yes	Yes						No	No	Yes
+HIST1H2BC	8347.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+HIST1H2BO	8348.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+HIST1H3A	8350.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST1H3D	8351.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST1H3C	8352.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST1H3E	8353.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST1H3I	8354.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST1H3G	8355.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HIST1H3J	8356.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+CIITA	4261.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes								
+HIST1H3H	8357.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+ZNRF3	84133.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No						No	No	Yes
+UBR5	51366.0	3.0	Yes	Yes	No	No	Yes	No	No	No	Yes						No	No	Yes
+HIST1H3B	8358.0	6.0	Yes	No	No	Yes	Yes	No	Yes	Yes	Yes						No	No	Yes
+ATXN2	6311.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+ATXN7	6314.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+FAM175A	84142.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+SERPINB3	6317.0	2.0	Yes	Yes	Yes	Yes	No	No	No	No	No								
+YAP1	10413.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+SERPINB4	6318.0	2.0	Yes	No	No	Yes	No	No	No	No	No								
+RPTOR	57521.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+APLNR	187.0	2.0	Yes	Yes	Yes	Yes	No	No	No	No	No								
+MITF	4286.0	6.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	No	Yes								
+ARID5B	84159.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	0.5	No	No	Yes			
+MLH1	4292.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+FGF3	2248.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+KMT2A	4297.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	1.0	No	Yes	Yes			
+FGF4	2249.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+MLLT1	4298.0	4.0	Yes	No	No	Yes	No	No	Yes	No	Yes								
+ETNK1	55500.0	3.0	Yes	No	No	No	Yes	No	No	No	Yes						No	No	Yes
+AKT1	207.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	6.0	0.0	Yes	No	Yes	No	No	Yes
+AKT2	208.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+FGFR1	2260.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	0.0	0.0	No	No	Yes			
+FGFR3	2261.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+SPOP	8405.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+ALB	213.0	2.0	Yes	No	No	Yes	No	No	No	No	No	0.0	0.5	No	No	Yes			
+FGFR2	2263.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+FGFR4	2264.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+MAD2L2	10459.0	2.0	Yes	Yes	Yes	Yes	No	No	No	No	No								
+FH	2271.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes								
+SETD3	84193.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+ALK	238.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+HOXB13	10481.0	3.0	Yes	Yes	Yes	Yes	Yes	No	No	No	No								
+ALOX12B	242.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No								
+SDHA	6389.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+RAD54L	8438.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No								
+SDHB	6390.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+FOXF1	2294.0	2.0	Yes	Yes	Yes	Yes	No	No	No	No	No								
+SDHC	6391.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+SDHD	6392.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+MPL	4352.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+CARM1	10498.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+CUL3	8452.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No	0.0	3.5	No	Yes	Yes	No	No	Yes
+FOXO1	2308.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+TRAF7	84231.0	5.0	Yes	No	No	Yes	Yes	No	No	Yes	Yes						No	No	Yes
+FLI1	2313.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+MRE11A	4361.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+MAP2K4	6416.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+RRAS2	22800.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No	1.0	0.0	Yes	No	Yes			
+FLT1	2321.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+FLT3	2322.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+FLT4	2324.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes								
+SFRP1	6422.0	1.0	Yes	No	Yes	No	No	No	No	No	No								
+IKZF3	22806.0	3.0	Yes	Yes	Yes	No	Yes	No	Yes	No	No								
+SFRP2	6423.0	1.0	Yes	Yes	Yes	No	No	No	No	No	No								
+SRSF2	6427.0	6.0	Yes	No	No	Yes	Yes	No	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+EP400	57634.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+HIST2H3D	653604.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+PPM1D	8493.0	4.0	Yes	Yes	No	Yes	Yes	No	No	No	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+SGK1	6446.0	4.0	Yes	Yes	No	No	Yes	Yes	Yes	No	No						No	No	Yes
+SCG5	6447.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+KNSTRN	90417.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No						No	No	Yes
+PIK3R3	8503.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+APC	324.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	4.0	No	Yes	Yes	No	No	Yes
+PHF6	84295.0	6.0	Yes	No	Yes	Yes	Yes	No	Yes	Yes	Yes	0.0	0.5	No	No	Yes	No	No	Yes
+SESN3	143686.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+BIRC3	330.0	5.0	Yes	No	No	Yes	Yes	No	Yes	No	Yes						No	No	Yes
+FBXO11	80204.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes						No	No	Yes
+XIAP	331.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+MSH2	4436.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+MSH3	4437.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No	0.5	0.0	No	No	Yes			
+MSI1	4440.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+FAS	355.0	5.0	Yes	No	Yes	No	Yes	Yes	Yes	No	Yes						No	No	Yes
+TMEM127	55654.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes								
+HDAC7	51564.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No								
+DIS3	22894.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+AR	367.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+ARAF	369.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No	0.0	0.0	No	No	Yes	No	No	Yes
+PREX2	80243.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes						No	No	Yes
+ARID3B	10620.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+RHOA	387.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes	4.0	0.0	Yes	No	Yes	No	No	Yes
+MST1	4485.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+MST1R	4486.0	4.0	Yes	Yes	No	Yes	Yes	Yes	No	No	No								
+SETD2	29072.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	5.5	No	Yes	Yes	No	No	Yes
+MTAP	4507.0	3.0	Yes	No	Yes	Yes	No	Yes	No	No	No								
+KBTBD4	55709.0	2.0	Yes	No	No	Yes	No	No	No	No	No								
+BABAM1	29086.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+DKK1	22943.0	1.0	Yes	No	No	No	No	No	No	No	No								
+CTCF	10664.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	2.5	No	Yes	Yes	No	No	Yes
+MTOR	2475.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.5	0.0	Yes	No	Yes	No	No	Yes
+DROSHA	29102.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes						No	No	Yes
+GNA13	10672.0	4.0	Yes	Yes	No	No	Yes	Yes	Yes	No	No	1.0	0.0	Yes	No	Yes			
+PPP4R2	151987.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+TP63	8626.0	5.0	Yes	Yes	Yes	Yes	Yes	No	Yes	No	Yes						No	No	Yes
+TET1	80312.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+NT5C2	22978.0	5.0	Yes	Yes	No	No	Yes	Yes	Yes	No	Yes						No	No	Yes
+ANKRD11	29123.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+SMARCA2	6595.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+SMARCA4	6597.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.5	0.5	Yes	No	Yes	No	No	Yes
+CD274	29126.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+SMARCB1	6598.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+SMARCD1	6602.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes						No	No	Yes
+FLCN	201163.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+SOCS1	8651.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+SMARCE1	6605.0	3.0	Yes	Yes	Yes	Yes	No	No	No	No	Yes								
+FOXP1	27086.0	5.0	Yes	Yes	Yes	Yes	Yes	No	Yes	No	Yes								
+ZFHX3	463.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	0.5	No	No	Yes	No	No	Yes
+SMO	6608.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+ATF1	466.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+CARD11	84433.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+IRS2	8660.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+ATM	472.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	4.5	No	Yes	Yes	No	No	Yes
+DOT1L	84444.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+SUFU	51684.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+SPEN	23013.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+FYN	2534.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+CMTR2	55783.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+BBC3	27113.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+PRDM14	63978.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+STAG2	10735.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	3.0	No	Yes	Yes	No	No	Yes
+SLX4	84464.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+DKK4	27121.0	1.0	Yes	No	No	No	No	No	No	No	No								
+DKK3	27122.0	1.0	Yes	No	No	No	No	No	No	No	No								
+MUTYH	4595.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+DKK2	27123.0	1.0	Yes	No	No	No	No	No	No	No	No								
+GAB1	2549.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+PDCD1LG2	80380.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+SOS1	6654.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No	2.0	0.0	Yes	No	Yes			
+CD276	80381.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+SOX2	6657.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+MYC	4609.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes			
+MYCL	4610.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+MYCN	4613.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+SOX9	6662.0	5.0	Yes	Yes	Yes	Yes	Yes	Yes	No	Yes	No	0.0	1.5	No	Yes	Yes			
+PDS5B	23047.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No	0.0	1.0	No	Yes	Yes			
+MYD88	4615.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+SMG1	23049.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+ATP6V1B2	526.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+PLK2	10769.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+EED	8726.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No						No	No	Yes
+ATP6AP1	537.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+AGO2	27161.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+SETD1B	23067.0	2.0	Yes	No	No	No	Yes	No	No	No	No						No	No	Yes
+ARID4B	51742.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+ATR	545.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+ATRX	546.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	4.5	No	Yes	Yes	No	No	Yes
+RTEL1	51750.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+CDK12	51755.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+AXL	558.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+MYOD1	4654.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes						No	No	Yes
+B2M	567.0	6.0	Yes	No	Yes	Yes	Yes	No	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+SRC	6714.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+TNFRSF14	8764.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+GATA1	2623.0	6.0	Yes	No	No	Yes	Yes	No	Yes	Yes	Yes						No	No	Yes
+GATA2	2624.0	6.0	Yes	Yes	No	Yes	Yes	No	Yes	Yes	Yes						No	No	Yes
+GATA3	2625.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+BARD1	580.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+NBN	4683.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes								
+CCND1	595.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes			
+BCL2	596.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes			
+BCL2L1	598.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No								
+H3F3AP4	440926.0	1.0	Yes	No	No	No	No	No	No	No	No								
+BCL6	604.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+BCL9	607.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+BCR	613.0	5.0	Yes	Yes	No	No	Yes	Yes	Yes	No	Yes								
+SS18	6760.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+SESN1	27244.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+CRLF2	64109.0	6.0	Yes	Yes	No	Yes	Yes	No	Yes	Yes	Yes						No	No	Yes
+CIC	23152.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+ARID5A	10865.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+STAT1	6772.0	1.0	Yes	No	No	No	No	No	No	No	No								
+STAT2	6773.0	1.0	Yes	No	No	No	No	No	No	No	No								
+INPP4B	8821.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+STAT3	6774.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+STAT5A	6776.0	4.0	Yes	Yes	No	Yes	Yes	No	Yes	No	No								
+STAT5B	6777.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes						No	No	Yes
+RRAGC	64121.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+STAT6	6778.0	4.0	Yes	Yes	No	No	Yes	No	Yes	No	Yes								
+CXORF67	340602.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+PRDM1	639.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+BLM	641.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+AURKA	6790.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+NUTM1	256646.0	3.0	Yes	No	No	No	No	Yes	No	No	Yes								
+STK11	6794.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	3.0	No	Yes	Yes	No	No	Yes
+MALT1	10892.0	5.0	Yes	No	No	Yes	Yes	No	Yes	No	Yes								
+BMPR1A	657.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes								
+NF1	4763.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	9.0	No	Yes	Yes	No	No	Yes
+STK19	8859.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+FOXL2	668.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+BRCA1	672.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	2.5	No	Yes	Yes	No	No	Yes
+BRAF	673.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	6.5	0.0	Yes	No	Yes	No	No	Yes
+BRCA2	675.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.5	No	No	Yes	No	No	Yes
+NF2	4771.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	3.0	No	Yes	Yes	No	No	Yes
+ZFP36L1	677.0	1.0	Yes	No	Yes	No	No	No	No	No	No	0.0	0.5	No	No	Yes			
+NFE2	4778.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+NFE2L2	4780.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	8.0	0.0	Yes	No	Yes	No	No	Yes
+GLI1	2735.0	4.0	Yes	Yes	No	Yes	Yes	No	Yes	No	No						No	No	Yes
+KLF5	688.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No	2.5	0.0	Yes	No	Yes			
+FUBP1	8880.0	6.0	Yes	No	Yes	Yes	Yes	Yes	No	Yes	Yes	0.0	1.5	No	Yes	Yes	No	No	Yes
+BTG1	694.0	5.0	Yes	No	Yes	No	Yes	Yes	Yes	No	Yes								
+BTK	695.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+NFKBIA	4792.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+SYK	6850.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+PNRC1	10957.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+GNA11	2767.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+GNA12	2768.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No								
+BCL10	8915.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+MEF2B	100271849.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+NKX3-1	4824.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+GNAQ	2776.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	2.0	0.0	Yes	No	Yes	No	No	Yes
+GNAS	2778.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+GNB1	2782.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+PHOX2B	8929.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes						No	No	Yes
+MGA	23269.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	2.0	No	Yes	Yes			
+TAL1	6886.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+TAP1	6890.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+TAP2	6891.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+NOTCH1	4851.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	5.0	No	Yes	Yes	No	No	Yes
+NOTCH2	4853.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+NOTCH3	4854.0	4.0	Yes	Yes	Yes	Yes	Yes	Yes	No	No	No								
+NOTCH4	4855.0	3.0	Yes	Yes	Yes	Yes	Yes	No	No	No	No								
+NPM1	4869.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+HIST1H3F	8968.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+TCEB1	6921.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No	0.0	0.5	No	No	Yes			
+HIST1H2AG	8969.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+HIST1H2BJ	8970.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+ICOSLG	23308.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+MGAM	8972.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+RAB35	11021.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+TBX3	6926.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+HNF1A	6927.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+TCF3	6929.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+TCF7L2	6934.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	1.0	No	Yes	Yes			
+RPS6KA4	8986.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+ARHGEF28	64283.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+NRAS	4893.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	9.5	0.5	Yes	No	Yes	No	No	Yes
+CALR	811.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+TRA	6955.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes								
+TRB	6957.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes								
+NTHL1	4913.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+KMT5A	387893.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+NTRK1	4914.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+NTRK2	4915.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+NTRK3	4916.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+TRD	6964.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes								
+TRG	6965.0	2.0	Yes	Yes	No	No	No	No	Yes	No	No								
+DDR2	4921.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+GPS2	2874.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	1.5	No	Yes	Yes			
+KSR2	283455.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+MAP3K14	9020.0	4.0	Yes	Yes	No	Yes	Yes	No	Yes	No	No								
+SOCS3	9021.0	2.0	Yes	No	Yes	No	No	No	Yes	No	No								
+NUP98	4928.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+MPEG1	219972.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+SOX17	64321.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	1.0	0.0	Yes	No	Yes			
+NSD1	64324.0	5.0	Yes	Yes	Yes	Yes	Yes	No	Yes	No	Yes	0.0	3.0	No	Yes	Yes			
+RFWD2	64326.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+CASP8	841.0	6.0	Yes	No	Yes	Yes	Yes	Yes	No	Yes	Yes	0.0	4.0	No	Yes	Yes	No	No	Yes
+SETD4	54093.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+GRIN2A	2903.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes						No	No	Yes
+NCSTN	23385.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No								
+ARHGAP35	2909.0	2.0	Yes	Yes	Yes	Yes	No	No	No	No	No	0.0	3.0	No	Yes	Yes			
+RUNX1	861.0	6.0	Yes	No	Yes	Yes	Yes	No	Yes	Yes	Yes	0.0	3.0	No	Yes	Yes			
+RUNX1T1	862.0	4.0	Yes	Yes	No	No	Yes	No	Yes	No	Yes								
+CBFB	865.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	1.0	No	Yes	Yes			
+TEK	7010.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No								
+CBL	867.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+TERT	7015.0	5.0	Yes	Yes	No	Yes	Yes	Yes	No	No	Yes						No	No	Yes
+DICER1	23405.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+PTPRT	11122.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes						No	No	Yes
+GSK3B	2932.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+TFE3	7030.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+CCND2	894.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+CCND3	896.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+CCNE1	898.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+RYBP	23429.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+TGFBR1	7046.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+TGFBR2	7048.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	3.0	No	Yes	Yes	No	No	Yes
+MSH6	2956.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+USP8	9101.0	3.0	Yes	Yes	No	Yes	No	No	No	No	Yes						No	No	Yes
+DCUN1D1	54165.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+GTF2I	2969.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No	2.0	0.0	Yes	No	Yes			
+LATS1	9113.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+SF3B1	23451.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	5.0	0.0	Yes	No	Yes	No	No	Yes
+SMC3	9126.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No	0.5	0.0	No	No	Yes			
+NKX2-1	7080.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+CD28	940.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No						No	No	Yes
+TLE1	7088.0	1.0	Yes	No	No	No	No	No	No	No	No								
+TLE2	7089.0	1.0	Yes	No	No	No	No	No	No	No	No								
+TLE3	7090.0	1.0	Yes	No	No	No	No	No	No	No	No								
+TLE4	7091.0	1.0	Yes	No	No	No	No	No	No	No	No								
+BRD4	23476.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+FURIN	5045.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+WIF1	11197.0	2.0	Yes	No	Yes	No	No	No	No	No	Yes								
+ERRFI1	54206.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+HIST1H1C	3006.0	4.0	Yes	No	No	Yes	Yes	No	Yes	No	No	0.0	0.0	No	No	Yes			
+HIST1H1D	3007.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+CHEK2	11200.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	0.5	No	No	Yes			
+HIST1H1E	3008.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No	0.5	0.5	No	No	Yes			
+HIST1H1B	3009.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+PAK1	5058.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+CD58	965.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+TMPRSS2	7113.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	No	Yes								
+HIST1H2BD	3017.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+H3F3A	3020.0	6.0	Yes	Yes	No	Yes	Yes	Yes	No	Yes	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+CD79A	973.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+H3F3B	3021.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes						No	No	Yes
+CD79B	974.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+PARK2	5071.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+SETD7	80854.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+MAP3K13	9175.0	5.0	Yes	Yes	No	Yes	Yes	Yes	No	No	Yes						No	No	Yes
+PAX5	5079.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+SUZ12	23512.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+TNFAIP3	7128.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+AJUBA	84962.0	1.0	Yes	No	Yes	No	No	No	No	No	No	0.0	2.0	No	Yes	Yes			
+PCBP1	5093.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No	2.0	0.0	Yes	No	Yes	No	No	Yes
+CDC42	998.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+CDH1	999.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.0	2.0	No	Yes	Yes	No	No	Yes
+TOP1	7150.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes								
+TP53	7157.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.5	20.5	No	Yes	Yes	No	No	Yes
+TP53BP1	7158.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+HDAC1	3065.0	4.0	Yes	Yes	No	No	Yes	Yes	Yes	No	No								
+CDK4	1019.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	2.0	0.0	Yes	No	Yes			
+AURKB	9212.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+CDK6	1021.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+SP140	11262.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+CDK8	1024.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+CDKN1A	1026.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No	0.5	2.0	No	Yes	Yes	No	No	Yes
+CDKN1B	1027.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+CDKN2A	1029.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	8.0	No	Yes	Yes	No	No	Yes
+CDKN2B	1030.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+CDKN2C	1031.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	0.5	No	No	Yes			
+HGF	3082.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No	0.0	0.0	No	No	Yes			
+NRG1	3084.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes								
+ASXL1	171023.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.5	No	Yes	Yes	No	No	Yes
+PDCD1	5133.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+TRAF2	7186.0	4.0	Yes	No	No	Yes	Yes	No	Yes	No	No								
+HIF1A	3091.0	3.0	Yes	Yes	No	No	Yes	No	No	No	Yes						No	No	Yes
+TRAF3	7187.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No	0.0	1.0	No	Yes	Yes			
+TRAF5	7188.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+CEBPA	1050.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+HLA-A	3105.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	2.0	No	Yes	Yes			
+CENPA	1058.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+HLA-B	3106.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	4.0	No	Yes	Yes			
+PDGFB	5155.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+HLA-C	3107.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+PDGFRA	5156.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+PDGFRB	5159.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+PDPK1	5170.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+BACH2	60468.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+U2AF2	11338.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+TSC1	7248.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+TSC2	7249.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+TSHR	7253.0	6.0	Yes	Yes	No	Yes	Yes	No	Yes	Yes	Yes						No	No	Yes
+CHEK1	1111.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+FOXA1	3169.0	4.0	Yes	Yes	Yes	Yes	Yes	No	No	No	Yes	2.0	0.5	Yes	No	Yes	No	No	Yes
+KLF4	9314.0	5.0	Yes	Yes	Yes	Yes	Yes	No	No	Yes	Yes						No	No	Yes
+TRIP13	9319.0	2.0	Yes	Yes	Yes	Yes	No	No	No	No	No								
+PGR	5241.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No	0.0	0.5	No	No	Yes			
+TLX1	3195.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+TYK2	7297.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No								
+U2AF1	7307.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	5.0	0.0	Yes	No	Yes	No	No	Yes
+KMT2C	58508.0	6.0	Yes	No	Yes	Yes	Yes	No	Yes	Yes	Yes	0.0	5.0	No	Yes	Yes	No	No	Yes
+PIGA	5277.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+PIK3C2G	5288.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No								
+PIK3C3	5289.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+PIK3CA	5290.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	18.5	0.0	Yes	No	Yes	No	No	Yes
+NEGR1	257194.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+PIK3CB	5291.0	5.0	Yes	Yes	No	Yes	Yes	Yes	No	No	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+PIM1	5292.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+PIK3CD	5293.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+PIK3CG	5294.0	4.0	Yes	Yes	No	Yes	Yes	No	Yes	No	No	0.5	0.0	No	No	Yes			
+PIK3R1	5295.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.0	3.0	No	Yes	Yes	No	No	Yes
+PIK3R2	5296.0	4.0	Yes	No	Yes	Yes	Yes	No	Yes	No	No	2.0	0.0	Yes	No	Yes			
+RECQL4	9401.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes								
+ETAA1	54465.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+HRAS	3265.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	9.0	0.0	Yes	No	Yes	No	No	Yes
+PLCG1	5335.0	3.0	Yes	Yes	No	No	Yes	No	No	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+PLCG2	5336.0	4.0	Yes	Yes	No	Yes	Yes	No	Yes	No	No								
+KDM6A	7403.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	6.5	No	Yes	Yes	No	No	Yes
+VAV1	7409.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+SMYD3	64754.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+VAV2	7410.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+HIST1H2BK	85236.0	3.0	Yes	No	No	No	Yes	No	Yes	No	No								
+PMAIP1	5366.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+VEGFA	7422.0	4.0	Yes	Yes	No	Yes	Yes	Yes	No	No	No								
+PMS1	5378.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.5	0.0	No	No	Yes			
+VHL	7428.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+MAPKAP1	79109.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+DNAJB1	3337.0	4.0	Yes	No	No	Yes	Yes	No	No	No	Yes								
+RBM15	64783.0	3.0	Yes	Yes	Yes	No	No	No	Yes	No	Yes								
+PMS2	5395.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes	0.0	0.5	No	No	Yes			
+WHSC1	7468.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes			
+POLD1	5424.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes						No	No	Yes
+POLE	5426.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+POT1	25913.0	5.0	Yes	No	Yes	Yes	Yes	No	Yes	No	Yes						No	No	Yes
+TLX3	30012.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+IRF8	3394.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+WT1	7490.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.5	0.5	No	No	Yes	No	No	Yes
+XBP1	7494.0	3.0	Yes	Yes	No	No	Yes	No	Yes	No	No								
+ID3	3399.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No						No	No	Yes
+RICTOR	253260.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+WWTR1	25937.0	4.0	Yes	Yes	No	Yes	Yes	No	No	No	Yes								
+SAMHD1	25939.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+IDH1	3417.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	8.0	0.0	Yes	No	Yes	No	No	Yes
+XPO1	7514.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+IDH2	3418.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	2.5	0.0	Yes	No	Yes	No	No	Yes
+XRCC2	7516.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+PPARG	5468.0	5.0	Yes	Yes	No	Yes	Yes	Yes	No	No	Yes								
+YES1	7525.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+YY1	7528.0	1.0	Yes	Yes	No	No	No	No	No	No	No								
+CREB1	1385.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes								
+CREBBP	1387.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+CRKL	1399.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+IFNGR1	3459.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+NCOR1	9611.0	5.0	Yes	No	Yes	Yes	Yes	No	No	Yes	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+NCOR2	9612.0	4.0	Yes	No	No	No	Yes	No	Yes	No	Yes						No	No	Yes
+PPP2R1A	5518.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+TCL1B	9623.0	1.0	Yes	Yes	No	No	No	No	No	No	No								
+IGF1	3479.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+BCL11B	64919.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes								
+IGF1R	3480.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+IGF2	3481.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+CSF1R	1436.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	Yes	No						No	No	Yes
+CSF3R	1441.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+PPP6C	5537.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+IKBKE	9641.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+CCNB3	85417.0	1.0	Yes	Yes	No	No	No	No	No	No	No								
+CTR9	9646.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+MDC1	9656.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+SETBP1	26040.0	5.0	Yes	Yes	No	No	Yes	No	Yes	Yes	Yes	0.5	0.0	No	No	Yes	No	No	Yes
+PRKACA	5566.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes						No	No	Yes
+PRKAR1A	5573.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+PRKCI	5584.0	4.0	Yes	Yes	No	Yes	Yes	Yes	No	No	No								
+FEV	54738.0	3.0	Yes	No	No	No	No	No	Yes	No	Yes								
+PRKD1	5587.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+CTLA4	1493.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+NUP93	9688.0	4.0	Yes	No	No	Yes	Yes	No	Yes	No	No	0.0	0.5	No	No	Yes			
+SLFN11	91607.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+ARID3C	138715.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+MAPK1	5594.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+CTNNB1	1499.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	10.0	0.0	Yes	No	Yes	No	No	Yes
+MAPK3	5595.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+MAP2K1	5604.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	2.0	0.0	Yes	No	Yes	No	No	Yes
+MAP2K2	5605.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+IL3	3562.0	2.0	Yes	Yes	No	No	No	No	Yes	No	No								
+CUX1	1523.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes						No	No	Yes
+IL7R	3575.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+IL10	3586.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+CYLD	1540.0	5.0	Yes	No	Yes	Yes	Yes	No	No	Yes	Yes	0.0	0.5	No	No	Yes	No	No	Yes
+TET2	54790.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+SETD1A	9739.0	2.0	Yes	Yes	No	No	Yes	No	No	No	No								
+PRSS1	5644.0	1.0	Yes	No	No	No	No	No	No	No	No								
+RELN	5649.0	2.0	Yes	No	No	No	No	No	Yes	No	No								
+ZBTB20	26137.0	1.0	Yes	Yes	Yes	No	No	No	No	No	No	0.0	0.5	No	No	Yes			
+KMT2B	9757.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	2.0	No	Yes	Yes			
+HDAC4	9759.0	3.0	Yes	Yes	Yes	No	Yes	No	Yes	No	No								
+INHA	3623.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+INHBA	3624.0	4.0	Yes	Yes	Yes	Yes	Yes	No	Yes	No	No								
+INPP4A	3631.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+CYP19A1	1588.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+INPPL1	3636.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	1.0	No	Yes	Yes			
+INSR	3643.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+BCORL1	63035.0	5.0	Yes	No	Yes	No	Yes	Yes	Yes	No	Yes						No	No	Yes
+FAM46C	54855.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+IRF1	3659.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+IRF4	3662.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+DAXX	1616.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+NUF2	83540.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+IRS1	3667.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+KEAP1	9817.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	1.5	1.5	Yes	No	Yes	No	No	Yes
+PTCH1	5727.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.5	No	Yes	Yes	No	No	Yes
+PTEN	5728.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	14.0	No	Yes	Yes	No	No	Yes
+BCOR	54880.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.5	2.0	No	Yes	Yes	No	No	Yes
+DUSP22	56940.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+RNF43	54894.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	2.5	No	Yes	Yes	No	No	Yes
+DDIT3	1649.0	3.0	Yes	No	No	No	No	No	Yes	No	Yes								
+GAB2	9846.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+DDX3X	1654.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes	0.0	2.0	No	Yes	Yes	No	No	Yes
+WHSC1L1	54904.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	No	Yes								
+PTP4A1	7803.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+MSI2	124540.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes								
+CSDE1	7812.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No	0.0	1.0	No	Yes	Yes			
+JAK1	3716.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+JAK2	3717.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+JAK3	3718.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+JARID2	3720.0	3.0	Yes	Yes	Yes	No	Yes	No	Yes	No	No								
+PTPN1	5770.0	2.0	Yes	Yes	Yes	No	Yes	No	No	No	No								
+PTPN2	5771.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+SETDB1	9869.0	3.0	Yes	Yes	Yes	Yes	Yes	No	No	No	No						No	No	Yes
+JUN	3725.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+PTPN11	5781.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	2.0	0.0	Yes	No	Yes	No	No	Yes
+PTPRD	5789.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	0.0	No	No	Yes	No	No	Yes
+SDHAF2	54949.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes								
+PAX8	7849.0	2.0	Yes	Yes	No	No	No	No	No	No	Yes								
+PTPRS	5802.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+CXCR4	7852.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+NADK	65220.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+MAFB	9935.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+KDR	3791.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes						No	No	Yes
+SESN2	83667.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+CDC73	79577.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes						No	No	Yes
+TET3	200424.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+KIT	3815.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	3.5	0.0	Yes	No	Yes	No	No	Yes
+DEK	7913.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+FGF19	9965.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+MED12	9968.0	7.0	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+PGBD5	79605.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+RAC1	5879.0	5.0	Yes	Yes	No	Yes	Yes	Yes	No	No	Yes	3.0	0.0	Yes	No	Yes	No	No	Yes
+RAC2	5880.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+DNMT1	1786.0	4.0	Yes	Yes	No	Yes	Yes	No	No	Yes	No								
+DNMT3A	1788.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	3.0	No	Yes	Yes	No	No	Yes
+RAD21	5885.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes	0.0	0.0	No	No	Yes	No	No	Yes
+DNMT3B	1789.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+RAD51	5888.0	5.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	No								
+RAD51C	5889.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+RAD51B	5890.0	5.0	Yes	No	Yes	Yes	Yes	Yes	No	No	Yes								
+RAD51D	5892.0	4.0	Yes	No	Yes	Yes	Yes	Yes	No	No	No								
+KRAS	3845.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	17.0	0.0	Yes	No	Yes	No	No	Yes
+RAD52	5893.0	4.0	Yes	No	No	Yes	Yes	Yes	No	No	No								
+RAF1	5894.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes	0.0	0.0	No	No	Yes			
+AKT3	10000.0	5.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	No								
+CYSLTR2	57105.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No	1.0	0.0	Yes	No	Yes	No	No	Yes
+RARA	5914.0	6.0	Yes	No	No	Yes	Yes	Yes	Yes	No	Yes	0.0	0.0	No	No	Yes			
+H3F3C	440093.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No	0.0	0.0	No	No	Yes			
+ARID3A	1820.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+RASA1	5921.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	3.5	No	Yes	Yes			
+BCL2L11	10018.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	0.0	No	No	Yes			
+SH2B3	10019.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes						No	No	Yes
+RB1	5925.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	13.0	No	Yes	Yes	No	No	Yes
+ARID4A	5926.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+KDM5A	5927.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+DTX1	1840.0	3.0	Yes	No	Yes	No	Yes	No	Yes	No	No								
+DUSP4	1846.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+PAK5	57144.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+KAT6A	7994.0	3.0	Yes	No	No	No	No	No	Yes	No	Yes								
+VTCN1	79679.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+P2RY8	286530.0	5.0	Yes	No	Yes	No	Yes	Yes	Yes	No	Yes								
+RECQL	5965.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+NR4A3	8013.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+ECT2L	345930.0	2.0	Yes	No	Yes	No	No	No	Yes	No	No						No	No	Yes
+REL	5966.0	5.0	Yes	Yes	No	Yes	Yes	Yes	No	No	Yes								
+E2F3	1871.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+UPF1	5976.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+REST	5978.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+RET	5979.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	1.0	0.0	Yes	No	Yes	No	No	Yes
+MLLT10	8028.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+LCK	3932.0	3.0	Yes	Yes	No	No	Yes	No	No	No	Yes								
+FAM58A	92002.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+SHOC2	8036.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+TBL1XR1	79718.0	4.0	Yes	No	Yes	No	Yes	No	Yes	No	Yes	0.0	0.5	No	No	Yes	No	No	Yes
+PALB2	79728.0	6.0	Yes	No	Yes	Yes	Yes	Yes	Yes	No	Yes								
+RHEB	6009.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No	0.0	0.0	No	No	Yes			
+SHQ1	55164.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+RAD50	10111.0	4.0	Yes	No	Yes	Yes	Yes	No	Yes	No	No								
+RIT1	6016.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No	0.0	0.0	No	No	Yes			
+ESCO2	157570.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+SETDB2	83852.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+KMT2D	8085.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	8.0	No	Yes	Yes	No	No	Yes
+PBRM1	55193.0	7.0	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	Yes	0.0	4.0	No	Yes	Yes	No	No	Yes
+AGO1	26523.0	2.0	Yes	Yes	No	Yes	No	No	No	No	No								
+LATS2	26524.0	4.0	Yes	No	Yes	Yes	Yes	No	No	No	Yes	0.0	1.0	No	Yes	Yes	No	No	Yes
+EGFR	1956.0	7.0	Yes	Yes	No	Yes	Yes	Yes	Yes	Yes	Yes	4.0	0.0	Yes	No	Yes	No	No	Yes
+LMO1	4004.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes								
+LMO2	4005.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+EGR1	1958.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+SETD5	55209.0	2.0	Yes	No	No	No	Yes	No	No	No	No								
+EIF1AX	1964.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No	2.5	0.0	Yes	No	Yes			
+ARID2	196528.0	6.0	Yes	No	Yes	Yes	Yes	No	Yes	Yes	Yes	0.0	4.5	No	Yes	Yes	No	No	Yes
+TCL1A	8115.0	3.0	Yes	Yes	No	No	No	No	Yes	No	Yes								
+EIF4A2	1974.0	5.0	Yes	Yes	No	Yes	Yes	No	Yes	No	Yes								
+EIF4E	1977.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+LRP6	4040.0	1.0	Yes	Yes	No	No	No	No	No	No	No								
+LRP5	4041.0	1.0	Yes	Yes	Yes	No	No	No	No	No	No								
+MOB3B	79817.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+ROBO1	6091.0	2.0	Yes	No	Yes	No	Yes	No	No	No	No								
+ELF3	1999.0	3.0	Yes	Yes	Yes	Yes	Yes	No	No	No	No	0.0	1.0	No	Yes	Yes	No	No	Yes
+SPRED1	161742.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No								
+LTB	4050.0	2.0	Yes	Yes	Yes	No	Yes	No	No	No	No								
+ROS1	6098.0	6.0	Yes	Yes	No	Yes	Yes	Yes	Yes	No	Yes								
+ASXL2	55252.0	3.0	Yes	No	Yes	Yes	Yes	No	No	No	No	0.0	1.0	No	Yes	Yes	No	No	Yes
+GREM1	26585.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+EGFL7	51162.0	3.0	Yes	Yes	No	Yes	Yes	No	No	No	No								
+SPRTN	83932.0	2.0	Yes	No	Yes	Yes	No	No	No	No	No								
+STK40	83931.0	3.0	Yes	No	No	Yes	Yes	No	No	No	No								
+ACVR1B												0.0	0.5	No	No	Yes			
+ACVR2A												0.0	2.0	No	Yes	Yes			
+APOB												0.0	0.5	No	No	Yes			
+ATF7IP												0.0	1.5	No	Yes	Yes			
+ATXN3												0.0	0.5	No	No	Yes			
+BRD7												0.0	3.0	No	Yes	Yes			
+BTG2												0.0	0.5	No	No	Yes			
+CACNA1A												0.5	0.0	No	No	Yes			
+CBWD3												0.0	0.0	No	No	Yes			
+CD70												0.0	0.5	No	No	Yes			
+CHD3												0.0	1.0	No	Yes	Yes			
+CHD4												2.0	0.5	Yes	No	Yes			
+CHD8												0.0	1.0	No	Yes	Yes			
+CNBD1												1.0	0.0	Yes	No	Yes			
+COL5A1												1.0	0.0	Yes	No	Yes			
+CREB3L3												0.0	0.5	No	No	Yes			
+CTNND1												0.0	2.0	No	Yes	Yes			
+CUL1												2.0	0.0	Yes	No	Yes			
+DACH1												1.0	0.0	Yes	No	Yes			
+DAZAP1												0.0	0.5	No	No	Yes			
+DHX9												0.5	0.0	No	No	Yes			
+DIAPH2												0.5	0.0	No	No	Yes			
+DMD												1.0	0.0	Yes	No	Yes			
+EEF1A1												1.5	0.0	Yes	No	Yes			
+EEF2												0.0	1.0	No	Yes	Yes			
+EGR3												0.0	0.0	No	No	Yes			
+EPHA2												0.0	3.0	No	Yes	Yes			
+FAM46D												1.0	0.0	Yes	No	Yes			
+FLNA												0.0	1.0	No	Yes	Yes			
+FOXA2												0.0	1.0	No	Yes	Yes			
+FOXQ1												0.0	0.5	No	No	Yes			
+GABRA6												0.0	0.0	No	No	Yes			
+GRIN2D												0.5	0.0	No	No	Yes			
+HUWE1												0.0	0.5	No	No	Yes			
+IL6ST												0.0	0.5	No	No	Yes			
+IRF2												0.0	1.0	No	Yes	Yes			
+IRF6												0.0	0.5	No	No	Yes			
+KANSL1												0.0	3.0	No	Yes	Yes			
+KEL												0.0	0.0	No	No	Yes			
+KIF1A												0.0	1.0	No	Yes	Yes			
+KRT222												0.0	0.5	No	No	Yes			
+LEMD2												0.0	0.0	No	No	Yes			
+MACF1												0.5	0.0	No	No	Yes			
+MAP3K4												0.0	0.5	No	No	Yes			
+MGMT												0.0	0.0	No	No	Yes			
+MUC6												0.0	0.5	No	No	Yes			
+MYH9												1.0	0.0	Yes	No	Yes			
+NIPBL												0.0	2.0	No	Yes	Yes			
+NUP133												0.0	0.5	No	No	Yes			
+PLCB4												1.0	0.0	Yes	No	Yes			
+PLXNB2												0.5	0.0	No	No	Yes			
+POLQ												0.0	0.0	No	No	Yes			
+POLRMT												1.0	0.0	Yes	No	Yes			
+PSIP1												0.0	2.0	No	Yes	Yes			
+PTMA												0.0	1.0	No	Yes	Yes			
+PTPDC1												1.0	0.0	Yes	No	Yes			
+PTPRC												0.5	0.0	No	No	Yes			
+RFC1												0.0	0.5	No	No	Yes			
+RHOB												1.0	0.0	Yes	No	Yes			
+RNF111												0.0	1.0	No	Yes	Yes			
+RPL22												0.0	0.5	No	No	Yes			
+RPL5												0.0	1.0	No	Yes	Yes			
+RPS6KA3												0.0	1.0	No	Yes	Yes			
+RQCD1												1.5	0.0	Yes	No	Yes			
+SCAF4												0.0	2.0	No	Yes	Yes			
+SF1												1.5	0.0	Yes	No	Yes			
+SIN3A												0.0	1.5	No	Yes	Yes			
+SMARCA1												0.0	1.0	No	Yes	Yes			
+SPTA1												0.0	0.5	No	No	Yes			
+SPTAN1												0.0	1.0	No	Yes	Yes			
+TAF1												1.0	0.0	Yes	No	Yes			
+TCF12												0.0	2.0	No	Yes	Yes			
+TGIF1												0.0	0.5	No	No	Yes			
+THRAP3												0.0	1.0	No	Yes	Yes			
+TLR4												0.0	0.0	No	No	Yes			
+TMSB4X												0.0	0.5	No	No	Yes			
+TXNIP												0.0	0.5	No	No	Yes			
+UNCX												0.5	0.0	No	No	Yes			
+USP9X												0.0	1.0	No	Yes	Yes			
+ZBTB7B												0.0	1.0	No	Yes	Yes			
+ZC3H12A												0.0	0.0	No	No	Yes			
+ZCCHC12												1.0	0.0	Yes	No	Yes			
+ZFP36L2												0.0	1.0	No	Yes	Yes			
+ZMYM2												0.0	1.0	No	Yes	Yes			
+ZMYM3												0.0	1.0	No	Yes	Yes			
+ZNF133												1.0	0.0	Yes	No	Yes			
+ZNF750												0.0	1.5	No	Yes	Yes			
+A1CF	29974.0																No	No	Yes
+ACVR2A	92.0																No	No	Yes
+ANK1	286.0																No	No	Yes
+ARHGAP26	23092.0																No	No	Yes
+ARHGAP5	394.0																No	No	Yes
+ATP1A1	476.0																No	No	Yes
+BAX	581.0																No	No	Yes
+BCL2L12	83596.0																No	No	Yes
+BCL9L	283149.0																No	No	Yes
+BCLAF1	9774.0																No	No	Yes
+BIRC6	57448.0																No	No	Yes
+BMP5	653.0																No	No	Yes
+CACNA1D	776.0																No	No	Yes
+CBLB	868.0																No	No	Yes
+CCR4	1233.0																No	No	Yes
+CCR7	1236.0																No	No	Yes
+CD209	30835.0																No	No	Yes
+CDH10	1008.0																No	No	Yes
+CDH17	1015.0																No	No	Yes
+CHD2	1106.0																No	No	Yes
+CHD4	1108.0																No	No	Yes
+CNBD1	168975.0																No	No	Yes
+CNOT3	4849.0																No	No	Yes
+CNTNAP2	26047.0																No	No	Yes
+COL2A1	1280.0																No	No	Yes
+CRNKL1	51340.0																No	No	Yes
+CSMD3	114788.0																No	No	Yes
+CTNNA2	1496.0																No	No	Yes
+CTNND1	1500.0																No	No	Yes
+CTNND2	1501.0																No	No	Yes
+CYP2C8	1558.0																No	No	Yes
+DCAF12L2	340578.0																No	No	Yes
+DCC	1630.0																No	No	Yes
+DGCR8	54487.0																No	No	Yes
+DNM2	1785.0																No	No	Yes
+EIF1AX	107984923.0																No	No	Yes
+FAM135B	51059.0																No	No	Yes
+FAM47C	442444.0																No	No	Yes
+FAT3	120114.0																No	No	Yes
+FAT4	79633.0																No	No	Yes
+FBLN2	2199.0																No	No	Yes
+FES	2242.0																No	No	Yes
+FKBP9	11328.0																No	No	Yes
+FLNA	2316.0																No	No	Yes
+GRM3	2913.0																No	No	Yes
+IKBKB	3551.0																No	No	Yes
+IRS4	8471.0																No	No	Yes
+ISX	91464.0																No	No	Yes
+ITGAV	3685.0																No	No	Yes
+KAT7	11143.0																No	No	Yes
+KCNJ5	3762.0																No	No	Yes
+KLF6	1316.0																No	No	Yes
+LARP4B	23185.0																No	No	Yes
+LEF1	51176.0																No	No	Yes
+LRP1B	53353.0																No	No	Yes
+MACC1	346389.0																No	No	Yes
+MB21D2	151963.0																No	No	Yes
+MUC16	94025.0																No	No	Yes
+MUC4	4585.0																No	No	Yes
+NBEA	26960.0																No	No	Yes
+NFKBIE	4794.0																No	No	Yes
+PABPC1	26986.0																No	No	Yes
+POLG	5428.0																No	No	Yes
+POLQ	10721.0																No	No	Yes
+PRDM2	7799.0																No	No	Yes
+PRKCB	5579.0																No	No	Yes
+PRPF40B	25766.0																No	No	Yes
+PTK6	5753.0																No	No	Yes
+PTPN13	5783.0																No	No	Yes
+PTPN6	5777.0																No	No	Yes
+PTPRB	5787.0																No	No	Yes
+PTPRC	5788.0																No	No	Yes
+QKI	9444.0																No	No	Yes
+RGPD3	653489.0																No	No	Yes
+RGS7	6000.0																No	No	Yes
+ROBO2	6092.0																No	No	Yes
+RPL10	6134.0																No	No	Yes
+RPL5	6125.0																No	No	Yes
+S100A7	6278.0																No	No	Yes
+SALL4	57167.0																No	No	Yes
+SFRP4	6424.0																No	No	Yes
+SIRPA	140885.0																No	No	Yes
+SIX1	6495.0																No	No	Yes
+SIX2	10736.0																No	No	Yes
+SKI	6497.0																No	No	Yes
+TENT5C	54855.0																No	No	Yes
+TNC	3371.0																No	No	Yes
+TRRAP	8295.0																No	No	Yes
+WNK2	65268.0																No	No	Yes
+ZEB1	6935.0																No	No	Yes
+ZMYM3	9203.0																No	No	Yes
+ZNF429	353088.0																No	No	Yes
+ZNF479	90827.0																No	No	Yes
