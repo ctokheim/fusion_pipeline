@@ -16,6 +16,9 @@ def parse_arguments():
     parser.add_argument('-d', '--db',
                         type=str, required=True,
                         help='Agfusion database file')
+    parser.add_argument('-e', '--ensembl-release',
+                        type=int, default=95,
+                        help='Ensembl release version')
     parser.add_argument('-p', '--protein-databases',
                         type=str, default='pfam,tmhmm',
                         help='Protein databases to use (separated by comma)')
@@ -32,7 +35,7 @@ def main(opts):
     prot_databases = opts['protein_databases'].split(',')
     output_list = [['translate_id', 'PROT_ID', 'Domain_ID', 'Protein_start', 'Protein_end', 'Domain_name', 'Domain_description', 'database']]
     for database in prot_databases:
-        sqlite3_command = "SELECT * FROM homo_sapiens_95_{}".format(database)
+        sqlite3_command = "SELECT * FROM homo_sapiens_{}_{}".format(opts['ensembl_release'], database)
         mydb.sqlite3_cursor.execute(sqlite3_command)
         output_list += [list(x) + [database] for x in mydb.sqlite3_cursor.fetchall()]
 

@@ -16,6 +16,9 @@ def parse_arguments():
     parser.add_argument('-i', '--input',
                         type=str, required=True,
                         help='Merge afgusion results')
+    parser.add_argument('-e', '--ensembl-release',
+                        type=int, default=95,
+                        help='Ensembl release version')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='File containing WT protein sequence')
@@ -25,7 +28,7 @@ def parse_arguments():
 
 def main(opts):
     # load ensembl db
-    data = EnsemblRelease(95)
+    data = EnsemblRelease(opts['ensembl_release'])
 
     # read in fusion file
     df = pd.read_csv(opts['input'], sep='\t')

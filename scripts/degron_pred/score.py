@@ -22,6 +22,9 @@ def parse_arguments():
     parser.add_argument('-s', '--snvbox-annot',
                         type=str, required=True,
                         help='Annotated features from SNVBox')
+    parser.add_argument('-t', '--train',
+                        type=str, required=True,
+                        help='Training file for degron prediction')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='output')
@@ -36,12 +39,25 @@ def read_degron_info(mypath):
     degron_info['ID'] = degron_info['RefseqP'] + '_' + degron_info['mutation']
     return degron_info
 
+def convert_id_to_zero_based(mylist):
+    output_list = []
+    for i in mylist:
+        str_split = i.split('_')
+        start, end = str_split[-1].split('-')
+        new_str = '_'.join([str_split[0], str_split[-2]]) + '_' + '{}-{}'.format(int(start)-1, end)
+        output_list.append(new_str)
+    return output_list
 
 def main(opts):
     # read in data
     df = pd.read_csv(opts['snvbox_annot'], sep='\t', na_values=['None'])
     degron_info = read_degron_info(opts['motif_info'])
     df = pd.merge(df, degron_info[['ID', 'frac_protein_len']], on='ID', how='left')
+
+    # read in known degron instances from literature
+    train = pd.read_csv(opts['train'], sep='\t')
+    train_ids = train[train['class']=='real']['DegronID'].unique()
+    train_ids = convert_id_to_zero_based(train_ids)
 
     # read in model
     with open(opts['input'], 'rb') as handle:
@@ -60,6 +76,9 @@ def main(opts):
     # merge the score information back into the data frame
     result = pd.merge(result, degron_info[['DegronID', 'geneSymbol']].drop_duplicates('DegronID'),
                       left_index=True, right_on='DegronID', how='left')
+
+    # degrons known in the literature
+    result.loc[result['DegronID'].isin(train_ids), 'Random Forest score'] = 1
 
     # save the results
     result.to_csv(opts['output'], sep='\t', index=False)

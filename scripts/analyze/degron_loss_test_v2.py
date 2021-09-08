@@ -90,7 +90,7 @@ def main(opts):
     else:
         myflag = is_inframe    # & is_low_point_drivers
     tmp = fusion_calls[myflag].copy()
-    gene_cts = tmp[is_inframe]["{}_gene".format(eoi)].value_counts()
+    gene_cts = tmp["{}_gene".format(eoi)].value_counts()
     minimal_genes = gene_cts[gene_cts>1].index.tolist()
     tmp = tmp[tmp["{}_gene".format(eoi)].isin(minimal_genes)].copy()
 

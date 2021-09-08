@@ -42,6 +42,7 @@ def read_degron_impact(mypath):
 
 def read_drivers(mypath):
     tmp = pd.read_csv(mypath, sep='\t').rename(columns={'Hugo Symbol': 'gene'})
+    tmp = tmp.drop_duplicates(subset=['gene'])
     return tmp
 
 def myrename(mystr, suffix="5'"):
@@ -104,7 +105,7 @@ def read_fusion_domains(fus_path, wt_path, fusion_annot, min_domain_len=25, min_
     is_good_domain = []
     for ix, row in domains_three.iterrows():
         domain_start = row['Protein_start']
-        fus_codon_pos = row['CodonPos1']
+        fus_codon_pos = row['CodonPos2']
         if fus_codon_pos==domain_start:
             pid = row['ID_three']
             is_pid = wt_domains['PROT_ID']==pid
@@ -127,6 +128,7 @@ def read_fusion_domains(fus_path, wt_path, fusion_annot, min_domain_len=25, min_
     domains = pd.concat([domains_five, domains_three])
 
     # aggregate all domains for one fusion into a single line
+    domains = domains[~domains['Domain_name'].isnull()]
     domains_agg = domains.groupby(['ID', 'origin of domain'])['Domain_name'].agg(lambda x: ','.join(x))
     domains_agg = domains_agg.reset_index()
     domains_agg = domains_agg.pivot(index='ID', columns='origin of domain', values='Domain_name')
@@ -163,9 +165,9 @@ def merge_lost_prot_domains(fusion_calls, wt_dom_path):
 
         # figure out which domains are lost, if any
         p1_diff_fusion = p1_wt_cts - p1_fus_cts
-        p1_domain_lost = ''.join([(x+',')*p1_diff_fusion[x] for x in p1_diff_fusion]).strip(',')
+        p1_domain_lost = ''.join([(x+',')*p1_diff_fusion[x] for x in p1_diff_fusion if x is not np.nan]).strip(',')
         p2_diff_fusion = p2_wt_cts - p2_fus_cts
-        p2_domain_lost = ''.join([(x+',')*p2_diff_fusion[x] for x in p2_diff_fusion]).strip(',')
+        p2_domain_lost = ''.join([(x+',')*p2_diff_fusion[x] for x in p2_diff_fusion if x is not np.nan]).strip(',')
 
         # append result
         five_dom_lost.append(p1_domain_lost)

@@ -20,6 +20,9 @@ def parse_arguments():
     parser.add_argument('-i', '--input-dir',
                         type=str, required=True,
                         help='Agfusion result directory')
+    parser.add_argument('-e', '--ensembl-release',
+                        type=int, default=95,
+                        help='Ensembl release version')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='Merged output results')
@@ -88,7 +91,7 @@ def get_cds_pos(data, tx_id, pos):
 
 def main(opts):
     # load ensembl db
-    data = EnsemblRelease(95)
+    data = EnsemblRelease(opts['ensembl_release'])
 
     output_list = []
     column_list = None

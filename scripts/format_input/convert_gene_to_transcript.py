@@ -24,6 +24,9 @@ def parse_arguments():
     parser.add_argument('-c', '--custom',
                         type=str, required=True,
                         help='Custom selected transcripts')
+    parser.add_argument('-e', '--ensembl-release',
+                        type=int, default=95,
+                        help='Ensembl release number')
     parser.add_argument('-o', '--output',
                         type=str, required=True,
                         help='Agfusion file with transcript IDs')
@@ -104,7 +107,7 @@ def main(opts):
         df.loc[is_not_null, 'Transcript2'] = df.loc[is_not_null, 'custom_transcript2']
 
     # Check transcripts
-    data = EnsemblRelease(95)
+    data = EnsemblRelease(opts['ensembl_release'])
 
     # figure out the appropriate canonical tx
     output_list = []
